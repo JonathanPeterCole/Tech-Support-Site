@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {# If the there is a title, but a dash between the title and site name #}
+    {% block title %}{% endblock %}{% if self.title() %} - {% endif %}
+    Jonathan Cole's Computer Services
+  </title>
+</head>
+<body>
+  <div id="content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
