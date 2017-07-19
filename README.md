@@ -8,6 +8,9 @@ This is a basic website for freelance tech support using Flask with Flask Mail t
 ### Template files
 Jinja2 is used in this project for templating. In order to use syntax highlighting in Atom on these files, the template files are named with the extension `.html.j2`. To enable Jinja2 highlighting on these files in Atom, the [atom-jinja2](https://atom.io/packages/atom-jinja2) package will need to be installed.
 
+### Bootstrap
+A customised version of Bootstrap featuring only common CSS has been used for this project to reduce load times. To make use of Bootstrap components or jQuery plugins, a new version will need to be downloaded.
+
 ## Setup
 
 ### Deploying the Site on a DigitalOcean Droplet
