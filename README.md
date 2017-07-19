@@ -11,6 +11,9 @@ Jinja2 is used in this project for templating. In order to use syntax highlighti
 ### Bootstrap
 A customised version of Bootstrap featuring only common CSS has been used for this project to reduce load times. To make use of Bootstrap components or jQuery plugins, a new version will need to be downloaded.
 
+### Icons
+The icons, including the favicon for this site, were generated using [Real Favicon Generator](https://realfavicongenerator.net/).
+
 ## Setup
 
 ### Deploying the Site on a DigitalOcean Droplet
