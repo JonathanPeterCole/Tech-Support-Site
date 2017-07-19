@@ -29,3 +29,15 @@
        url('/static/fonts/roboto/roboto-bold.woff') format('woff');
   font-weight: bold;
 }
+
+/* Text */
+a:hover {
+    text-decoration: none;
+}
+.gradient-text {
+  color: #db2525;
+  /* Enable gradient only in Chrome in case of compatibility issues */
+  background: -webkit-linear-gradient(left, #db2525 0%,#a10829 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

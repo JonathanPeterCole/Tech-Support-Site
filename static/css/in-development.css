@@ -1,0 +1,23 @@
+#announcement {
+  height: 95vh;
+  width: 100%;
+  display: table;
+}
+.announcement-container {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: sans-serif;
+  text-align: center;
+}
+.announcement-title {
+  font-family: Nevis;
+  font-weight: bold;
+  font-size: 42px;
+  color: #db2525;
+}
+.announcement-text {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  color: #2f2f2f;
+}
