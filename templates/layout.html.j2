@@ -2,32 +2,38 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     {# If the there is a title, but a dash between the title and site name #}
-    {% block title %}{% endblock %}{% if self.title() %} - {% endif %}
+    {% block title %}{% endblock %}
+    {% if self.title() %} - {% endif %}
     Jonathan Cole's Computer Services
   </title>
-  <!-- ICONS -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/icons/apple-touch-icon.png">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/static/img/icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/img/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/img/icons/favicon-16x16.png">
-  <link rel="manifest" href="/static/img/icons/manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/icons/apple-touch-icon.png">
   <link rel="mask-icon" href="/static/img/icons/safari-pinned-tab.svg" color="#db2525">
-  <link rel="shortcut icon" href="/static/img/icons/favicon.ico">
-  <!-- META TAGS -->
+  <link rel="manifest" href="/static/img/icons/manifest.json">
   <meta name="theme-color" content="#db2525">
   <meta name="msapplication-config" content="/static/img/icons/browserconfig.xml">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS -->
+
+  <!-- JS and CSS -->
+  <script src="/static/js/jquery-3.2.1.min.js"></script>
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
   <link href="/static/css/main.css" rel="stylesheet">
-  <!-- JAVASCRIPT -->
-  <script src="/static/js/jquery-3.2.1.min.js"></script>
-  {% block header %}{% endblock %}
+
+  {# Head block for additional CSS or Javascript #}
+  {% block head %}{% endblock %}
 </head>
+
 <body>
-  <div id="content">
-    {% block content %}{% endblock %}
-  </div>
+  {% block body %}{% endblock %}
+
+  <footer>
+    <!-- TODO: Add footer -->
+  <footer>
 </body>
 </html>
