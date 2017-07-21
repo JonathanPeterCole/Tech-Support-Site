@@ -1,3 +1,8 @@
+/**
+	* Main CSS for my site
+  * @author JonathanPeterCole@gmail.com
+**/
+
 /* Fonts */
 @font-face {
     font-family: 'Nevis';
@@ -31,8 +36,29 @@
 }
 
 /* Text */
-a:hover {
-    text-decoration: none;
+html {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+a,
+a:active,
+a:hover,
+a:focus {
+  text-decoration: none;
+  transition: 0.2s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nevis', sans-serif;
+  font-weight: bold;
+  margin: 0px;
+  text-transform: uppercase;
 }
 .gradient-text {
   color: #db2525;
@@ -40,4 +66,31 @@ a:hover {
   background: -webkit-linear-gradient(left, #db2525 0%,#a10829 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+/* Footer */
+footer {
+  background: #0f0f0f;
+  padding: 40px 0px;
+  font-size: 1.1em;
+}
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+.footer-list li {
+  float: left;
+  color: #dddddd;
+  margin-right: 30px;
+  font-weight: bold;
+}
+.footer-list li a {
+  color: #dddddd;
+}
+.footer-list li a:hover {
+  color: #ffffff;
+}
+.footer-text {
+  color: #999999;
 }
