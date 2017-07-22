@@ -8,7 +8,7 @@ mail = Mail(app)
 
 @app.route("/")
 def index():
-    return render_template('in-development.html.j2')
+    return render_template('index.html.j2')
 
 if __name__ == "__main__":
     app.run()
