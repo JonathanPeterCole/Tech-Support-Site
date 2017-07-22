@@ -30,6 +30,9 @@
 </head>
 
 <body>
+  {% if navbar_enabled != false %}
+    {% include "components/navbar.html.j2" %}
+  {% endif %}
   {% block body %}{% endblock %}
   {% include "components/footer.html.j2" %}
 </body>
