@@ -77,6 +77,50 @@ header {
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
 }
+.navbar-logo {
+  width: 125px;
+  height: 70px;
+  padding: 20px 0;
+  display: block;
+  float: left;
+}
+.navbar-list {
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  float: right;
+}
+.navbar-list li {
+  height: 100%;
+  float: left;
+}
+.navbar-list li a {
+  height: 70px;
+  padding: 17px;
+  display: block;
+  color: #db2525;
+  font-family: Quicksand, sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+.navbar-list li a:hover {
+  color: #96013d;
+}
+.navbar-list li a .highlight {
+  height: 36px;
+  padding: 0 12px;
+  transition: 0.2s;
+  border-radius: 2px;
+  background-color: #db2525;
+  color: #fff;
+}
+.navbar-list li a:hover .highlight {
+  background: #96013d;
+}
 
 /* Footer */
 footer {
