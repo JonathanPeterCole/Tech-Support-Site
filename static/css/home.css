@@ -1,0 +1,12 @@
+/**
+	* CSS for the homepage of my site
+  * @author JonathanPeterCole@gmail.com
+**/
+
+/* Banner */
+.banner-img {
+  background: url(/static/img/home/banner.png) no-repeat bottom center;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
