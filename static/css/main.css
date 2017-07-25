@@ -63,6 +63,13 @@ h6 {
 main {
   margin-top: 70px;
 }
+hr {
+  width: 85px;
+  height: 5px;
+  background: #db2525;
+  border: none;
+  margin: 20px auto;
+}
 
 /* Text Colours */
 .light-text {
