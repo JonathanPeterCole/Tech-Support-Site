@@ -60,12 +60,35 @@ h6 {
   margin: 0px;
   text-transform: uppercase;
 }
+main {
+  margin-top: 70px;
+}
+
+/* Text Colours */
+.light-text {
+  color: #fefefe;
+}
+.grey-text {
+  color: #696969;
+}
+.dark-text {
+  color: #212121;
+}
+.red-text {
+  color: #db2525;
+}
+
+/* Gradients */
 .gradient-text {
   color: #db2525;
   /* Enable gradient only in Chrome in case of compatibility issues */
   background: -webkit-linear-gradient(left, #db2525 0%,#a10829 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+.gradient-background {
+  background: #db2525;
+  background: linear-gradient(to right, rgba(219,37,37,1) 0%, rgba(161,8,41,1) 100%);
 }
 
 /* Navbar */
@@ -76,6 +99,7 @@ header {
   top: 0;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+  z-index: 1000;
 }
 .navbar-logo {
   width: 125px;
@@ -147,4 +171,22 @@ footer {
 }
 .footer-text {
   color: #999999;
+}
+
+/* Banners */
+.banner {
+  height: calc(100vh - 400px);
+  background: #131313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-background {
+  background: url(/static/img/main/background-grain.jpg);
+  height: 100%;
+  width: 100%;
+}
+.banner-content {
+  position: absolute;
+  text-align: center;
 }
