@@ -76,16 +76,15 @@ h4 {
   margin: 30px 0;
   font-size: 1.5em;
 }
-
-main {
-  margin-top: 70px;
-}
 hr {
   width: 85px;
   height: 5px;
   background: #db2525;
   border: none;
   margin-top: 12px;
+}
+main {
+  margin-top: 70px;
 }
 
 /* Text Colours */
@@ -213,4 +212,10 @@ footer {
 .banner-content {
   position: absolute;
   text-align: center;
+}
+
+/* Javascript Elements */
+.fade-in {
+  opacity: 0;
+  transition: 0.75s;
 }
