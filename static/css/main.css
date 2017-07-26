@@ -8,31 +8,31 @@
     font-family: 'Nevis';
     src: url('/static/fonts/nevis/nevis-bold.woff2') format('woff2'),
          url('/static/fonts/nevis/nevis-bold.woff') format('woff');
-    font-weight: bold;
+    font-weight: 700;
 }
 @font-face {
   font-family: 'Quicksand';
   src: url('/static/fonts/quicksand/quicksand-bold.woff2') format('woff2'),
        url('/static/fonts/quicksand/quicksand-bold.woff') format('woff');
-  font-weight: bold;
+  font-weight: 700;
 }
 @font-face {
   font-family: 'Roboto';
   src: url('/static/fonts/roboto/roboto-light.woff2') format('woff2'),
        url('/static/fonts/roboto/roboto-light.woff') format('woff');
-  font-weight: lighter;
+  font-weight: 300;
 }
 @font-face {
   font-family: 'Roboto';
   src: url('/static/fonts/roboto/roboto-regular.woff2') format('woff2'),
        url('/static/fonts/roboto/roboto-regular.woff') format('woff');
-  font-weight: normal;
+  font-weight: 400;
 }
 @font-face {
   font-family: 'Roboto';
   src: url('/static/fonts/roboto/roboto-bold.woff2') format('woff2'),
        url('/static/fonts/roboto/roboto-bold.woff') format('woff');
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* HTML Tags */
@@ -56,25 +56,8 @@ h4,
 h5,
 h6 {
   font-family: 'Nevis', sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-}
-h1 {
-  margin: 0 auto;
-  font-size: 4em;
-}
-h2 {
-  margin: 60px auto;
-  font-size: 2.7em;
-  text-align: center;
-}
-h3 {
-  margin: 0 auto;
-  font-size: 1.5em;
-}
-h4 {
-  margin: 30px 0;
-  font-size: 1.5em;
 }
 hr {
   width: 85px;
@@ -86,19 +69,38 @@ hr {
 main {
   margin-top: 70px;
 }
+section {
+  width: 100%;
+  padding: 55px 0;
+}
 
-/* Text Colours */
-.light-text {
+/* Text Styles */
+h1 {
+  margin: 0 auto;
+  font-size: 4em;
   color: #fefefe;
 }
-.grey-text {
-  color: #696969;
+h2 {
+  margin: 0 auto 45px auto;
+  width: fit-content;
+  font-size: 2.7em;
+  color: #db2525;
 }
-.dark-text {
+h3 {
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: #fefefe;
+}
+h4 {
+  margin: 30px 0;
+  font-size: 1.5em;
   color: #212121;
 }
-.red-text {
-  color: #db2525;
+.text-light {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  color: #696969;
 }
 
 /* Gradients */
@@ -149,7 +151,7 @@ header {
   display: block;
   color: #db2525;
   font-family: Quicksand, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.1em;
   line-height: 38px;
   text-transform: uppercase;
@@ -184,7 +186,7 @@ footer {
   float: left;
   color: #dddddd;
   margin-right: 30px;
-  font-weight: bold;
+  font-weight: 700;
 }
 .footer-list li a {
   color: #dddddd;
