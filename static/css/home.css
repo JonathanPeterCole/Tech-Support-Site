@@ -39,7 +39,7 @@ section.services {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
 }
 .service .text {
-  padding: 0;
+  padding: 60px;
 }
 .service .image-box {
   padding: 0;
@@ -60,4 +60,7 @@ section.services {
 }
 .service:hover img {
   transform: scale(1.08);
+}
+.service .text p {
+  margin: 20px 0;
 }

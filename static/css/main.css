@@ -92,13 +92,19 @@ h3 {
   color: #fefefe;
 }
 h4 {
-  margin: 30px 0;
+  margin: 0 0 20px 0;
   font-size: 1.5em;
   color: #212121;
 }
 .text-light {
   font-family: Roboto, sans-serif;
   font-weight: 300;
+  font-size: 1.3em;
+  color: #696969;
+}
+.text-bold {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
   font-size: 1.3em;
   color: #696969;
 }
