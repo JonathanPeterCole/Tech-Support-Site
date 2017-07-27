@@ -12,7 +12,7 @@
 }
 
 /* About */
-section .about {
+section.about {
   background: #fff;
 }
 .about img {
