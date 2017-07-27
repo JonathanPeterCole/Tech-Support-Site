@@ -43,6 +43,7 @@ section.services {
 }
 .service .image-box {
   padding: 0;
+  overflow: hidden;
 }
 .service .image-box.setup {
   background: #dddddd;
@@ -55,4 +56,8 @@ section.services {
 }
 .service .image-box img {
   width: 100%;
+  transition: 0.2s ease;
+}
+.service:hover img {
+  transform: scale(1.08);
 }
