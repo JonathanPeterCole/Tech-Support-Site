@@ -21,3 +21,21 @@ section.about {
   border-radius: 100%;
   margin-bottom: 20px;
 }
+
+/* Services */
+section.services {
+  background: #f1f1f1;
+  padding-bottom: 20px;
+}
+.services .service {
+  width: 100%;
+  min-height: 500px;
+  background: #fff;
+  margin-bottom: 35px;
+  border-radius: 3px;
+  transition: 0.2s;
+  box-shadow: rgba(0, 0, 0, 0) 0px 9px 30px;
+}
+.services .service:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
+}
