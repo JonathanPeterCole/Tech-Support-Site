@@ -27,15 +27,32 @@ section.services {
   background: #f1f1f1;
   padding-bottom: 20px;
 }
-.services .service {
-  width: 100%;
-  min-height: 500px;
+.service {
   background: #fff;
-  margin-bottom: 35px;
+  margin: 0 0 35px 0;
   border-radius: 3px;
   transition: 0.2s;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0) 0px 9px 30px;
 }
-.services .service:hover {
+.service:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
+}
+.service .text {
+  padding: 0;
+}
+.service .image-box {
+  padding: 0;
+}
+.service .image-box.setup {
+  background: #dddddd;
+}
+.service .image-box.upgrade {
+  background: #191919;
+}
+.service .image-box.repair {
+  background: #737be4;
+}
+.service .image-box img {
+  width: 100%;
 }
