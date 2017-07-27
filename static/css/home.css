@@ -75,10 +75,13 @@ section.contact-and-book {
 }
 .contact-and-book .contact-details {
   text-align: center;
-  padding: 35px 0;
   color: #dddddd;
   font-size: 1.3em;
   font-weight: 300;
+}
+.contact-details img {
+  margin: 10px 0 12px 0;
+  height: 50px;
 }
 .contact-details a {
   color: #b7b7b7;
