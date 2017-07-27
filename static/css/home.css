@@ -15,3 +15,9 @@
 section .about {
   background: #fff;
 }
+.about img {
+  height: 125px;
+  width: 125px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
