@@ -64,3 +64,25 @@ section.services {
 .service .text p {
   margin: 20px 0;
 }
+
+/* Contact and Book */
+section.contact-and-book {
+  background: #191919;
+}
+.contact-and-book h2 {
+  margin: 0;
+  line-height: 1.15;
+}
+.contact-and-book .contact-details {
+  text-align: center;
+  padding: 35px 0;
+  color: #dddddd;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+.contact-details a {
+  color: #b7b7b7;
+}
+.contact-details a:hover {
+  color: #fff;
+}
