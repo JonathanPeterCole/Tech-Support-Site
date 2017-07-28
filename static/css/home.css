@@ -16,10 +16,20 @@
   background: #fff;
 }
 #about img {
-  height: 125px;
-  width: 125px;
+  height: 130px;
+  width: 130px;
+  margin: 5px auto;
   border-radius: 100%;
-  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  #about {
+    text-align: justify;
+  }
+  #about img {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 40px auto;
+  }
 }
 
 /* Services */
@@ -40,6 +50,7 @@
 }
 .service .text {
   padding: 60px;
+  padding-bottom: 40px;
 }
 .service .image-box {
   padding: 0;
@@ -63,6 +74,21 @@
 }
 .service .text p {
   margin: 20px 0;
+}
+@media (max-width: 991px) {
+  .service .text {
+    padding: 40px;
+    padding-bottom: 20px;
+  }
+  .service .image-box img {
+    width: auto;
+    height: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .service {
+    margin-bottom: 20px;
+  }
 }
 
 /* Contact and Book */
@@ -88,4 +114,12 @@
 }
 .contact-details a:hover {
   color: #fff;
+}
+@media (max-width: 991px) {
+  #contact-and-book {
+    text-align: center;
+  }
+  #contact-and-book .contact-details {
+    margin-top: 20px;
+  }
 }

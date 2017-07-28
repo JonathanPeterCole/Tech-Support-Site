@@ -75,6 +75,14 @@ section .centered-header {
   margin-bottom: 45px;
   text-align: center;
 }
+@media (max-width: 991px) {
+  section {
+    padding: 40px 0;
+  }
+  section .centered-header {
+    margin-bottom: 35px;
+  }
+}
 
 /* Header Styles */
 h1 {
@@ -98,25 +106,34 @@ h4 {
   font-size: 1.5em;
   color: #212121;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   h1 {
     font-size: 3em;
   }
-  h3 {
-    font-size: 1.3em;
-  }
-}
-@media (max-width: 992px) {
-  h1 {
+  h2 {
     font-size: 2.5em;
   }
   h3 {
     font-size: 1.3em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+}
+@media (max-width: 767px) {
   h1 {
     font-size: 1.9em;
+  }
+  h2 {
+    font-size: 2em;
   }
   h3 {
     font-size: 1.2em;
@@ -135,6 +152,30 @@ h4 {
   font-weight: 700;
   font-size: 1.3em;
   color: #696969;
+}
+@media (max-width: 1199px) {
+  .text-light {
+    font-size: 1.2em;
+  }
+  .text-bold {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 991px) {
+  .text-bold {
+    font-size: 1.1em;
+  }
+  .text-bold {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 767px) {
+  .text-light {
+    font-size: 1em;
+  }
+  .text-bold {
+    font-size: 1em;
+  }
 }
 
 
@@ -256,7 +297,7 @@ footer {
   position: absolute;
   text-align: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .banner {
     height: 500px;
   }
@@ -264,7 +305,7 @@ footer {
     padding-top: 0px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .banner {
     height: 400px;
   }
@@ -272,7 +313,7 @@ footer {
     padding-top: 40px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .banner {
     height: 400px;
   }
