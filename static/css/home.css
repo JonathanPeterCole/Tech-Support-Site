@@ -12,7 +12,7 @@
 }
 
 /* About */
-section.about {
+#about {
   background: #fff;
 }
 .about img {
@@ -23,7 +23,7 @@ section.about {
 }
 
 /* Services */
-section.services {
+#services {
   background: #f1f1f1;
   padding-bottom: 20px;
 }
@@ -66,14 +66,14 @@ section.services {
 }
 
 /* Contact and Book */
-section.contact-and-book {
+#contact-and-book {
   background: #191919;
 }
-.contact-and-book h2 {
+#contact-and-book h2 {
   margin: 0;
   line-height: 1.15;
 }
-.contact-and-book .contact-details {
+#contact-and-book .contact-details {
   text-align: center;
   color: #dddddd;
   font-size: 1.3em;

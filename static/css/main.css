@@ -207,7 +207,7 @@ footer {
 }
 
 /* Banners */
-.banner {
+#banner {
   height: calc(100vh - 400px);
   background: #131313;
   display: flex;
