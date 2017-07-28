@@ -212,12 +212,13 @@ footer {
 }
 
 /* Banners */
-#banner {
+.banner {
   height: calc(100vh - 400px);
   background: #131313;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 .banner-background {
   background: url(/static/img/main/background-grain.jpg);
