@@ -70,6 +70,11 @@ section {
   width: 100%;
   padding: 55px 0;
 }
+section .centered-header {
+  width: 100%;
+  margin-bottom: 45px;
+  text-align: center;
+}
 
 /* Text Styles */
 h1 {
@@ -78,10 +83,10 @@ h1 {
   color: #fefefe;
 }
 h2 {
-  margin: 0 auto 45px auto;
-  width: fit-content;
+  margin: 0;
   font-size: 2.7em;
   color: #db2525;
+  display: inline-block;
 }
 h3 {
   margin: 0 auto;
