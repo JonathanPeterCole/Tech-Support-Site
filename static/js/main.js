@@ -21,6 +21,13 @@ $(document).ready(function() {
     var target = $(this).attr("href");
     // Get the offset
     var offset = $(target).offset().top - 70;
+    // Ensure the offset is within the page limits
+    if (offset < 0) {
+      offset = 0;
+    }
+    if (offset > $(document).height() - $(window).height()) {
+      offset = $(document).height() - $(window).height()
+    }
     // Scroll to the target
     $('html,body').animate({scrollTop: offset}, 300);
   });
