@@ -13,6 +13,11 @@ $(document).ready(function() {
     setHeaderClass();
   });
 
+  // Hamburger Click Event
+  $(".hamburger").click(function(event) {
+    $(".navbar-list").toggleClass("open");
+  });
+
   // Navbar Button Event
   $(".scroll-btn").click(function(event) {
     event.preventDefault();
