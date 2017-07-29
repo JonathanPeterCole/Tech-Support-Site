@@ -30,8 +30,13 @@ $(document).ready(function() {
     } else if (offset > $(document).height() - $(window).height()) {
       offset = $(document).height() - $(window).height()
     }
-    // Scroll to the target
-    $('html,body').animate({scrollTop: offset}, 300);
+    // Scroll to the target and close the mobile nav menu if it's open
+    if ($(".navbar-list").hasClass("open")) {
+      $('html,body').animate({scrollTop: offset}, 0);
+      $(".navbar-list").toggleClass("open");
+    } else {
+      $('html,body').animate({scrollTop: offset}, 300);
+    }
   });
 
   // On Load Event
