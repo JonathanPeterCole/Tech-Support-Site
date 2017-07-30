@@ -250,7 +250,7 @@ header.on-scroll {
 .navbar-list li a {
   height: 64px;
   padding: 0 17px;
-  display: block;
+  display: inline-block;
   color: #db2525;
   font-family: Quicksand, sans-serif;
   font-weight: 700;
