@@ -23,7 +23,7 @@ $(document).ready(function() {
     event.preventDefault();
     // Get the target and offset
     var target = $(this).attr("href");
-    var offset = $(target).offset().top - 70;
+    var offset = $(target).offset().top - 64;
     // Ensure the offset is within the page limits
     if (offset < 0) {
       offset = 0;
