@@ -52,7 +52,6 @@ $(document).ready(function() {
       $('html,body').animate({scrollTop: offset}, 0);
       $(".navbar-list").toggleClass("open");
     } else {
-      window.scrollTo(0, offset, );
       $('html,body').animate({scrollTop: offset}, 300);
     }
   });
