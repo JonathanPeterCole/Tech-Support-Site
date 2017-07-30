@@ -292,7 +292,7 @@ header.on-scroll {
     background: #fff;
     width: 100%;
     z-index: 1100;
-    padding-top: 60px;
+    padding-top: 64px;
     transition: 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 0px 5px;
   }
