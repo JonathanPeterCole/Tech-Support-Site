@@ -281,6 +281,10 @@ header.on-scroll {
     background: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
   }
+  header.collapsed{
+    top: -64px;
+    box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 5px;
+  }
   .hamburger {
     display: block;
   }

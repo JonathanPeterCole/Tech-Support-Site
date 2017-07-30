@@ -3,6 +3,10 @@
   * @author JonathanPeterCole@gmail.com
 **/
 
+// Variables
+var header_height = 64;
+var scroll_position = 0;
+
 // Event listeners
 $(document).ready(function() {
   // Set Header class incase user has already scrolled
@@ -11,6 +15,17 @@ $(document).ready(function() {
   // On Scroll Event
   $(window).scroll(function() {
     setHeaderClass();
+  });
+
+  // Collapse header on mobile
+  $(window).scroll(function() {
+    var new_position = $(window).scrollTop();
+    if ((new_position > header_height) && (new_position > scroll_position)) {
+      $("header").addClass("collapsed");
+    } else {
+      $("header").removeClass("collapsed");
+    }
+    scroll_position = new_position;
   });
 
   // Hamburger Click Event
@@ -23,7 +38,7 @@ $(document).ready(function() {
     event.preventDefault();
     // Get the target and offset
     var target = $(this).attr("href");
-    var offset = $(target).offset().top - 64;
+    var offset = $(target).offset().top - header_height;
     // Ensure the offset is within the page limits
     if (offset < 0) {
       offset = 0;
@@ -32,9 +47,12 @@ $(document).ready(function() {
     }
     // Scroll to the target and close the mobile nav menu if it's open
     if ($(".navbar-list").hasClass("open")) {
+      // Set the scroll position variable to prevent the navbar being hidden
+      scroll_position = offset;
       $('html,body').animate({scrollTop: offset}, 0);
       $(".navbar-list").toggleClass("open");
     } else {
+      window.scrollTo(0, offset, );
       $('html,body').animate({scrollTop: offset}, 300);
     }
   });
