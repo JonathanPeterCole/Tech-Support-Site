@@ -153,6 +153,12 @@ h4 {
   font-size: 1.3em;
   color: #696969;
 }
+.text-small {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1em;
+  color: #696969;
+}
 @media (max-width: 1199px) {
   .text-light {
     font-size: 1.2em;
