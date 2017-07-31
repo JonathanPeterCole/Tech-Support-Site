@@ -55,12 +55,12 @@ $(document).ready(function() {
       $('html,body').animate({scrollTop: offset}, 300);
     }
   });
+});
 
-  // On Load Event
-  $(window).on("load", function() {
-    // Fade in elements with the .fade-in-onload class
-    $(".fade-in").css("opacity", "100");
-  });
+// On Load Events
+$(window).on("load", function() {
+  // Fade in elements with the .fade-in-onload class
+  $(".fade-in").css("opacity", "100");
 });
 
 // Functions
