@@ -392,3 +392,6 @@ footer {
   opacity: 0;
   transition: 0.75s;
 }
+.no-scroll {
+  overflow: hidden;
+}

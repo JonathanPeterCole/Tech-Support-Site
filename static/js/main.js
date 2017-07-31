@@ -30,7 +30,7 @@ $(document).ready(function() {
 
   // Hamburger Click Event
   $(".hamburger").click(function(event) {
-    $(".navbar-list").toggleClass("open");
+    toggleMobileNav();
   });
 
   // Navbar Button Event
@@ -50,7 +50,7 @@ $(document).ready(function() {
       // Set the scroll position variable to prevent the navbar being hidden
       scroll_position = offset;
       $('html,body').animate({scrollTop: offset}, 0);
-      $(".navbar-list").toggleClass("open");
+      toggleMobileNav();
     } else {
       $('html,body').animate({scrollTop: offset}, 300);
     }
@@ -65,11 +65,17 @@ $(document).ready(function() {
 
 // Functions
 function setHeaderClass() {
-  // The the user is not at the top of the page, add the on-scroll class,
+  // If the the user is not at the top of the page, add the on-scroll class,
   // otherwise remove it
   if ($(window).scrollTop() > 0) {
     $("header").addClass("on-scroll");
   } else {
     $("header").removeClass('on-scroll');
   }
+}
+
+function toggleMobileNav() {
+  // Toggle the navbar-list open class and the body no-scroll class together
+  $(".navbar-list").toggleClass("open");
+  $("body").toggleClass("no-scroll");
 }
