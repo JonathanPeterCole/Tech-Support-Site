@@ -110,6 +110,7 @@
   height: 50px;
 }
 .contact-details a {
+  display: inline-block;
   color: #b7b7b7;
 }
 .contact-details a:hover {
