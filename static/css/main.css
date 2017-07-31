@@ -224,10 +224,8 @@ header.on-scroll {
   margin-bottom: 4px;
 }
 .navbar-logo {
-  width: 125px;
   height: 64px;
   padding: 17px 0;
-  display: block;
   float: left;
   z-index: 1200;
   position: relative;
@@ -240,11 +238,9 @@ header.on-scroll {
   margin: 0 -17px 0 0;
   padding: 0;
   list-style-type: none;
-  overflow: hidden;
   float: right;
 }
 .navbar-list li {
-  height: 100%;
   float: left;
 }
 .navbar-list li a {
