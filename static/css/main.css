@@ -47,7 +47,7 @@ a:active,
 a:hover,
 a:focus {
   text-decoration: none;
-  transition: 0.2s;
+  transition: color 0.2s;
 }
 h1,
 h2,
@@ -197,7 +197,7 @@ header {
   height: 64px;
   position: fixed;
   top: 0;
-  transition: 0.2s;
+  transition: transform 0.2s, background 0.2s;
   background: rgba(255, 255, 255, 0);
   box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 5px;
   z-index: 1000;
@@ -265,7 +265,7 @@ header.on-scroll {
   .navbar-list li a .highlight {
     height: 44px;
     padding: 0 15px;
-    transition: 0.2s;
+    transition: background 0.2s;
     border-radius: 2px;
     background-color: #db2525;
     color: #fff;
@@ -297,7 +297,7 @@ header.on-scroll {
     width: 100%;
     z-index: 1100;
     padding-top: 64px;
-    transition: 0.4s ease;
+    transition: transform 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 0px 5px;
     transform: translateX(calc(-100% - 5px));
   }
