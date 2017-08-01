@@ -187,3 +187,13 @@ These instructions continue on from the work done in 'Deploying the Site on a Di
 
 1. Just run the renew command:  
 `certbot renew`
+
+###### Automating Certificate Renewal with Cron
+
+1. Open the crontab file:  
+`sudo crontab -e`
+
+2. Add the following line, which will renew the certificate at 12:00 every day:  
+`00 12 * * * /usr/bin/certbot renew --quiet`
+
+3. Save the file.
