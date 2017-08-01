@@ -41,7 +41,7 @@ For other projects, instances of Tech-Support-Site can be replaced with an appro
 
 2. Create a `Tech-Support-Site` folder, and then a `FlaskApp` folder within that.
 
-3. In `/var/www/Tech-Support-Site/FlaskApp`, add the `__init__.py` file and any other files for your app.
+3. In `/var/www/Tech-Support-Site/FlaskApp`, add the `__init__.py` file and any other files for the app.
 
 ###### Setting up the Virtual Environment
 
@@ -101,3 +101,89 @@ application.secret_key = 'SECRET KEY'
 
 6. Finally, restart Apache and the app should be live:  
 `sudo service apache2 restart`  
+
+### Connecting a Domain
+These instructions continue on from the work done in 'Deploying the Site on a DigitalOcean Droplet'.
+
+###### Setup with the Domain Registrar
+
+1. Register a domain.
+
+2. Set the custom name servers to the following:  
+```
+ns1.digitalocean.com
+ns2.digitalocean.com
+ns3.digitalocean.com
+```
+
+###### Setup Digital Ocean
+
+1. Go to the DigitalOcean dashboard.
+
+2. Under the Networking tab, add the domain.
+
+###### Setup Apache
+
+1. Using SFTP or the terminal, navigate to `/etc/apache2/sites-available` and open `Tech-Support-Site.conf` for editing.
+
+2. On the second line of the file, replace the server IP with the new domain, including `www.`, like so:  
+```
+<VirtualHost *:80>
+  ServerName www.mydomain.co.uk
+  ServerAdmin admin@mywebsite.com
+	WSGIScriptAlias / /var/www/Tech-Support-Site/tech-support-site.wsgi
+	<Directory /var/www/Tech-Support-Site/FlaskApp/>
+		Order allow,deny
+		Allow from all
+	</Directory>
+	Alias /static /var/www/Tech-Support-Site/FlaskApp/static
+	<Directory /var/www/Tech-Support-Site/FlaskApp/static/>
+		Order allow,deny
+		Allow from all
+	</Directory>
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+3. In the same file, add the following, replacing mydomain.co.uk with the domain:  
+```
+<VirtualHost *:80>
+    ServerName mydomain.co.uk
+    Redirect permanent / https://www.mydomain.co.uk/
+</VirtualHost>
+```
+
+4. Restart Apache:  
+`sudo service apache2 restart`
+
+5. Test the site by going to the domain. Make sure you try it with and without `www.` to ensure it redirects properly.
+
+### Setting up Apache for HTTPS with Certbot and Let's Encrypt
+These instructions continue on from the work done in 'Deploying the Site on a DigitalOcean Droplet' and 'Connecting a Domain'.
+
+###### Installing Certbot
+
+1. Add the certbot repository:  
+`sudo add-apt-repository ppa:certbot/certbot`
+
+2. Update the package list:  
+`sudo apt-get update`
+
+3. Install certbot:  
+`sudo apt-get install python-certbot-apache`  
+
+###### Setup Certbot
+
+1. Obtain and install certificates:  
+`sudo certbot --apache`
+
+2. Fill in the information as prompted.
+
+3. Certbot will do everything else for you, so once it's finished, the site should be set up to use HTTPS.
+
+###### Renewing Certificates
+
+1. Just run the renew command:  
+`certbot renew`
