@@ -12,6 +12,14 @@ $(document).ready(function() {
   // Set Header class incase user has already scrolled
   setHeaderClass();
 
+  // If the page loaded with an anchor, scroll to the correct part of the page
+  var url = window.location.href;
+  var anchorIndex = url.indexOf('#')
+  if (anchorIndex > 0) {
+    var anchor = url.substring(anchorIndex);
+    scrollToAnchor(anchor, 0);
+  }
+
   // On Scroll Event
   $(window).scroll(function() {
     setHeaderClass();
@@ -38,21 +46,12 @@ $(document).ready(function() {
     event.preventDefault();
     // Get the target and offset
     var target = $(this).attr("href");
-    var offset = $(target).offset().top - header_height;
-    // Ensure the offset is within the page limits
-    if (offset < 0) {
-      offset = 0;
-    } else if (offset > $(document).height() - $(window).height()) {
-      offset = $(document).height() - $(window).height()
-    }
-    // Scroll to the target and close the mobile nav menu if it's open
+    // Scroll to the anchor and close the mobile nav menu if it's open
     if ($(".navbar-list").hasClass("open")) {
-      // Set the scroll position variable to prevent the navbar being hidden
-      scroll_position = offset;
-      $('html,body').animate({scrollTop: offset}, 0);
+      scrollToAnchor(target, 0)
       toggleMobileNav();
     } else {
-      $('html,body').animate({scrollTop: offset}, 300);
+      scrollToAnchor(target, 300)
     }
   });
 });
@@ -64,6 +63,21 @@ $(window).on("load", function() {
 });
 
 // Functions
+function scrollToAnchor(anchor, animation) {
+  // Get the offset
+  var offset = $(anchor).offset().top - header_height;
+  // Ensure the offset is within the page limits
+  if (offset < 0) {
+    offset = 0;
+  } else if (offset > $(document).height() - $(window).height()) {
+    offset = $(document).height() - $(window).height()
+  }
+  // Set the scroll position variable to prevent the navbar being hidden
+  scroll_position = offset;
+  // Scroll to the target and close the mobile nav menu if it's open
+  $('html,body').animate({scrollTop: offset}, animation);
+}
+
 function setHeaderClass() {
   // If the the user is not at the top of the page, add the on-scroll class,
   // otherwise remove it
