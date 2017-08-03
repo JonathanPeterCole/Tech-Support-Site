@@ -1,5 +1,5 @@
 import os
-from flask import Flask, redirect, request, render_template
+from flask import Flask, redirect, request, render_template, send_from_directory
 from flask_mail import Mail, Message
 
 app = Flask (__name__)
@@ -9,6 +9,12 @@ mail = Mail(app)
 @app.route("/")
 def index():
     return render_template('index.html.j2')
+
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    # Get Robots.txt and Sitemap.xml from the static folder
+    return send_from_directory(app.static_folder, request.path[1:])
 
 @app.after_request
 def add_header(response):
