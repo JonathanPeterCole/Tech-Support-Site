@@ -1,0 +1,37 @@
+#toast {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 3000;
+  margin: 10px;
+  border-radius: 2px;
+  background: #db2525;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
+  transition: transform 0.2s ease;
+}
+#toast.dismiss {
+  transform: translateY(calc(100% + 20px));
+}
+#toast .text {
+  color: #ffffff;
+  font-size: 1.1em;
+  margin: 20px;
+}
+#toast .close-btn {
+  height: 35px;
+  margin-right: 12px;
+  padding: 0 25px;
+  border: none;
+  text-align: center;
+  border-radius: 2px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+}
+#toast .close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#toast .close-btn:focus {
+  outline:0;
+}

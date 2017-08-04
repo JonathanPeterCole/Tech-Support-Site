@@ -2,10 +2,20 @@
 
 {% block head %}
   <link href="/static/css/home.css" rel="stylesheet">
+  <link href="/static/css/toast.css" rel="stylesheet">
+  <script src="/static/js/toast.js"></script>
 {% endblock %}
 
 {% block body %}
   <main>
+    <div id="toast">
+      <div class="text">
+        I am currently on holiday and won't be able to provide services until
+        the 17th. I will still be replying to emails during this time.
+      </div>
+      <button class="close-btn">Okay</button>
+    </div>
+
     <section id="home" class="banner">
       <div class="banner-background fade-in">
         <div class="banner-img"></div>
