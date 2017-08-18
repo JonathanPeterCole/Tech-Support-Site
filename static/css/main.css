@@ -66,6 +66,13 @@ hr {
   border: none;
   margin-top: 12px;
 }
+main {
+  min-height: 100vh;
+}
+main.nav-margin {
+  min-height: calc(100vh - 64px);
+  margin-top: 64px;
+}
 section {
   width: 100%;
   padding: 55px 0;
@@ -209,6 +216,10 @@ header {
   z-index: 1000;
 }
 header.on-scroll {
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+}
+header.no-fade {
   background: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
 }

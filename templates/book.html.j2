@@ -1,0 +1,27 @@
+{% extends "components/layout.html.j2" %}
+
+{% set navbar_enabled = false %}
+
+{% block title %}
+  Book
+{% endblock %}
+
+{% block head %}
+  <!-- Booking CSS and JS here -->
+{% endblock %}
+
+{% block body %}
+  <header class="no-fade">
+    <div class="container">
+      <a class="navbar-logo" href="/" alt="Jonathan Cole's Computer Services">
+        <img src="/static/img/main/logo.svg"/>
+      </a>
+    </div>
+  </header>
+
+  <main class="nav-margin">
+    <div class="container">
+      Booking form goes here
+    </div>
+  </main>
+{% endblock %}

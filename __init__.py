@@ -10,6 +10,10 @@ mail = Mail(app)
 def index():
     return render_template('index.html.j2')
 
+@app.route("/book")
+def book():
+    return render_template('book.html.j2')
+
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')
 def static_from_root():
