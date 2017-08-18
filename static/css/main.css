@@ -277,7 +277,7 @@ header.no-fade {
 @media (min-width: 768px) {
   .navbar-list li a .highlight {
     height: 44px;
-    padding: 0 15px;
+    padding: 0 30px;
     transition: background 0.2s;
     border-radius: 2px;
     background-color: #db2525;
