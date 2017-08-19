@@ -219,10 +219,6 @@ header.on-scroll {
   background: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
 }
-header.no-fade {
-  background: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
-}
 .hamburger {
   float: left;
   height: 64px;
