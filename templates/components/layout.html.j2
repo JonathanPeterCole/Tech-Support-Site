@@ -26,6 +26,14 @@
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
   <link href="/static/css/main.css" rel="stylesheet">
 
+  <!-- Social -->
+  <meta property="og:title" content="{% block social_title %}Jonathan Cole Computer Services{% endblock %}">
+  <meta property="og:description" content="{% block social_description %}Providing technical support for Holsworthy and Bude{% endblock %}">
+  <meta property="og:type" content="{% block social_type %}website{% endblock %}">
+  <meta property="og:url" content="https://www.jonathancolecs.uk/">
+  <meta property="og:image" content="https://www.jonathancolecs.uk/static/img/main/social/image.png">
+  <meta property="og:image:alt" content="New PC Setup, Upgrades, Repairs, and Virus Removal in Holworthy and Bude">
+
   {# Head block for additional CSS or Javascript #}
   {% block head %}{% endblock %}
 </head>
