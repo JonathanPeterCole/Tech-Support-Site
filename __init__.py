@@ -14,6 +14,15 @@ def index():
 def book():
     return render_template('book.html.j2')
 
+@app.route("/book/submit", methods = ['POST'])
+def submit_booking():
+    # Get the form data
+    test_field_1 = request.form.get('test-field-1', default="Error")
+    test_field_2 = request.form.get('test-field-2', default="Error")
+    # Put the form data into string and return it
+    result = "Test Field 1: " + test_field_1 + "<br>Test Field 2: " + test_field_2
+    return result
+
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')
 def static_from_root():
