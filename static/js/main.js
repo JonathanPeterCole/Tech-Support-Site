@@ -85,15 +85,13 @@ $(function() {
     // Get the current and target locations and split them
     var current_location = $(location).attr('href').split('#');
     var target_location = $(this).prop("href").split('#');
-
     // Get the split URLs and Anchors
     current_url = current_location[0];
     target_url = target_location[0];
     current_anchor = current_location[1];
     target_anchor = target_location[1];
-
-    // Check if the target has an anchor and the URLs match
-    if (target_anchor != "#" && current_url == target_url) {
+    // Check if the target anchor is not empty and the URLs match
+    if (target_anchor && current_url == target_url) {
       // Prevent the default link action
       event.preventDefault();
       // Scroll to the anchor and close the mobile nav menu if it's open
