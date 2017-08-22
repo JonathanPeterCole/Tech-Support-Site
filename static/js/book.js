@@ -14,6 +14,9 @@ $(function() {
       url: $(this).attr('action'),
       success: function(response) {
         $('#result').html(response);
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) {
+        $('#result').html("Error: " + errorThrown);
       }
     });
   });
