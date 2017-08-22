@@ -7,8 +7,8 @@
 //  Global Variables
 //  ------------------------------------------------------------------------
 
-var header_height = 64;
-var scroll_position = 0;
+var headerHeight = 64;
+var scrollPosition = 0;
 
 //  ------------------------------------------------------------------------
 //  Fade In On Load
@@ -31,13 +31,13 @@ $(function() {
     // Set header background opacity
     setHeaderClass();
     // Show or Hide the header on mobile
-    var new_position = $(window).scrollTop();
-    if ((new_position > header_height) && (new_position > scroll_position)) {
+    var newPosition = $(window).scrollTop();
+    if (newPosition > headerHeight && newPosition > scrollPosition) {
       $("header").addClass("collapsed");
     } else {
       $("header").removeClass("collapsed");
     }
-    scroll_position = new_position;
+    scrollPosition = newPosition;
   });
 });
 
@@ -75,31 +75,31 @@ function toggleMobileNav() {
 $(function() {
   // If the page loaded with an anchor, scroll to the correct part of the page
   var url = window.location.href;
-  var anchor_index = url.indexOf('#')
-  if (anchor_index > 0) {
-    var anchor = url.substring(anchor_index);
+  var anchorIndex = url.indexOf('#')
+  if (anchorIndex > 0) {
+    var anchor = url.substring(anchorIndex);
     scrollToAnchor(anchor, 0);
   }
   // Navbar Button Event
   $("a").click(function(event) {
     // Get the current and target locations and split them
-    var current_location = $(location).attr('href').split('#');
-    var target_location = $(this).prop("href").split('#');
+    var currentLocation = $(location).attr('href').split('#');
+    var targetLocation = $(this).prop("href").split('#');
     // Get the split URLs and Anchors
-    current_url = current_location[0];
-    target_url = target_location[0];
-    current_anchor = current_location[1];
-    target_anchor = target_location[1];
+    currentUrl = currentLocation[0];
+    targetUrl = targetLocation[0];
+    currentAnchor = currentLocation[1];
+    targetAnchor = targetLocation[1];
     // Check if the target anchor is not empty and the URLs match
-    if (target_anchor && current_url == target_url) {
+    if (targetAnchor && currentUrl == targetUrl) {
       // Prevent the default link action
       event.preventDefault();
       // Scroll to the anchor and close the mobile nav menu if it's open
       if ($(".navbar-list").hasClass("open")) {
-        scrollToAnchor("#" + target_anchor, 0)
+        scrollToAnchor("#" + targetAnchor, 0)
         toggleMobileNav();
       } else {
-        scrollToAnchor("#" + target_anchor, 300)
+        scrollToAnchor("#" + targetAnchor, 300)
       }
     }
   });
@@ -107,7 +107,7 @@ $(function() {
 
 function scrollToAnchor(anchor, animation) {
   // Get the offset
-  var offset = $(anchor).offset().top - header_height;
+  var offset = $(anchor).offset().top - headerHeight;
   // Ensure the offset is within the page limits
   if (offset < 0) {
     offset = 0;
@@ -115,7 +115,7 @@ function scrollToAnchor(anchor, animation) {
     offset = $(document).height() - $(window).height()
   }
   // Set the scroll position variable to prevent the navbar being hidden
-  scroll_position = offset;
+  scrollPosition = offset;
   // Scroll to the target and close the mobile nav menu if it's open
   $('html,body').animate({scrollTop: offset}, animation);
 }
