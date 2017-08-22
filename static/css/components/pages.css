@@ -1,0 +1,13 @@
+/**
+	* Pages CSS for my site
+  * @author JonathanPeterCole@gmail.com
+**/
+
+.page {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.page.display {
+  display: block;
+}

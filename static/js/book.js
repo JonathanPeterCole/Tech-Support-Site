@@ -4,6 +4,9 @@
 **/
 
 $(function() {
+  // Prepare the page Manager
+  var bookingPageManager = new pageManager('#page-container');
+  // Submit action
   $("#booking-form").submit(function(event) {
     // Prevent the usual form submit action
     event.preventDefault();
@@ -19,5 +22,7 @@ $(function() {
         $('#result').html("Error: " + errorThrown);
       }
     });
+    // Switch to the results page
+    bookingPageManager.setPage('result');
   });
 });
