@@ -18,24 +18,29 @@ $(function() {
   });
 
   // Submit action
-  $("#booking-form").submit(function(event) {
+  $("form").submit(function(event) {
     // Prevent the usual form submit action
     event.preventDefault();
-    // Switch to the loading page
-    bookingPageManager.setPage('loading');
-    // Make an AJAX call and display the results
-    $.ajax({
-      data: $(this).serialize(),
-      type: $(this).attr('method'),
-      url: $(this).attr('action'),
-      success: function(response) {
-        $('#result').html(response);
-        bookingPageManager.setPage('result');
-      },
-      error: function(XMLHttpRequest, textStatus, errorThrown) {
-        $('#result').html("Error: " + errorThrown);
-        bookingPageManager.setPage('result');
-      }
-    });
+    // Submit the form data
+    submitForm($(this));
   });
 });
+
+function submitForm(form) {
+  // Switch to the loading page
+  bookingPageManager.setPage('loading');
+  // Make an AJAX call and display the results
+  $.ajax({
+    data: form.serialize(),
+    type: form.attr('method'),
+    url: form.attr('action'),
+    success: function(response) {
+      $('#result').html(response);
+      bookingPageManager.setPage('result');
+    },
+    error: function(XMLHttpRequest, textStatus, errorThrown) {
+      $('#result').html("Error: " + errorThrown);
+      bookingPageManager.setPage('result');
+    }
+  });
+}
