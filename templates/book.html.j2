@@ -22,20 +22,32 @@
             </svg>
           </div>
         </div>
-        <!-- Form Page -->
-        <div id="form" class="page">
-          <form id="booking-form" action="/book/submit" method="post">
-            <div class="form-group">
-              <label for="text-field-1">Test Field 1:</label><br>
-              <input type="text" class="form-control" name="test-field-1"><br>
+        <!-- Services Page -->
+        <div id="services" class="page">
+          <div class="row">
+            <div class="col-md-4">
+              <a target-page="setup-form" href="#">New PC Setup</a>
             </div>
-            <div class="form-group">
-              <label for="text-field-1">Test Field 2:</label><br>
-              <input type="text" class="form-control" name="test-field-2"><br>
+            <div class="col-md-4">
+              <a target-page="upgrade-form" href="#">Upgrade</a>
             </div>
-            <button type="submit">Submit</button>
-          </form>
+            <div class="col-md-4">
+              <a target-page="repairs-form" href="#">Repairs and Virus Removal</a>
+            </div>
+          </div>
         </div>
+        <!-- Form Page -->
+        <form id="setup-form" class="page" action="/book/submit" method="post">
+          <div class="form-group">
+            <label for="text-field-1">Test Field 1:</label><br>
+            <input type="text" class="form-control" name="test-field-1"><br>
+          </div>
+          <div class="form-group">
+            <label for="text-field-1">Test Field 2:</label><br>
+            <input type="text" class="form-control" name="test-field-2"><br>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
         <!-- Results Page -->
         <div id="result" class="page">
           <!-- AJAX Result should appear here -->

@@ -8,10 +8,15 @@ bookingPageManager = new pageManager('#page-container');
 
 // Open the switch to the form page when done loading
 $(window).on("load", function() {
-  bookingPageManager.setPage('form');
+  bookingPageManager.setPage('services');
 });
 
 $(function() {
+  // Service Selection
+  $("#services a").click(function(event) {
+    bookingPageManager.setPage($(this).attr('target-page'));
+  });
+
   // Submit action
   $("#booking-form").submit(function(event) {
     // Prevent the usual form submit action
