@@ -5,7 +5,7 @@
 
 function pageManager(pageContainer) {
   // Set starting variables
-  this.pageContainer = pageContainer;
+  var pageContainer = pageContainer;
 
   // Change the page
   this.setPage = function(targetPageID) {
@@ -13,7 +13,7 @@ function pageManager(pageContainer) {
     var currentPage;
     var targetPage;
     // Loop through the pages in the container
-    $(this.pageContainer + ' .page').each(function() {
+    $(pageContainer + ' .page').each(function() {
       // If the page ID matches, display it, otherwise hide it
       if($(this).attr('id') == targetPageID) {
         targetPage = $(this);
