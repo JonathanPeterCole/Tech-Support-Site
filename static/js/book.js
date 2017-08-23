@@ -3,15 +3,15 @@
   * @author JonathanPeterCole@gmail.com
 **/
 
+// Prepare the page Manager
+bookingPageManager = new pageManager('#page-container');
+
+// Open the switch to the form page when done loading
+$(window).on("load", function() {
+  bookingPageManager.setPage('form');
+});
+
 $(function() {
-  // Prepare the page Manager
-  var bookingPageManager = new pageManager('#page-container');
-
-  // Open the switch to the form page when done loading
-  $(window).on("load", function() {
-    bookingPageManager.setPage('form');
-  });
-
   // Submit action
   $("#booking-form").submit(function(event) {
     // Prevent the usual form submit action
