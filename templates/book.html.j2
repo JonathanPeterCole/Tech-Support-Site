@@ -14,7 +14,16 @@
   <main class="nav-margin">
     <div class="container">
       <div id="page-container">
-        <div id="form" class="page display">
+        <!-- Loading Page -->
+        <div id="loading" class="page display">
+          <div class="loader">
+            <svg class="circle" viewBox="0 0 50 50">
+              <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+          </div>
+        </div>
+        <!-- Form Page -->
+        <div id="form" class="page">
           <form id="booking-form" action="/book/submit" method="post">
             <div class="form-group">
               <label for="text-field-1">Test Field 1:</label><br>
@@ -27,7 +36,7 @@
             <button type="submit">Submit</button>
           </form>
         </div>
-
+        <!-- Results Page -->
         <div id="result" class="page">
           <!-- AJAX Result should appear here -->
         </div>
