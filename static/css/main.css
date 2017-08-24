@@ -246,7 +246,7 @@ header.on-scroll {
 }
 .navbar-logo {
   height: 64px;
-  padding: 17px 0;
+  padding: 17px 5px;
   float: left;
   z-index: 1200;
   position: relative;
