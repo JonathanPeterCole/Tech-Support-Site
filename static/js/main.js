@@ -20,6 +20,20 @@ $(window).on("load", function() {
 });
 
 //  ------------------------------------------------------------------------
+//  Banner Parallax
+//  ------------------------------------------------------------------------
+
+$(function() {
+  // On Scroll Event
+  $(window).scroll(function() {
+    // Get half the scroll distance
+    var parallax = $(window).scrollTop()/2;
+    // Apply a transform to the banner background
+    $(".banner-background").css({"transform": "translateY(" + parallax +"px"})
+  });
+});
+
+//  ------------------------------------------------------------------------
 //  Header On Scroll
 //  ------------------------------------------------------------------------
 
