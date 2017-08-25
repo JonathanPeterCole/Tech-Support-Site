@@ -65,6 +65,7 @@ hr {
 }
 main {
   min-height: 100vh;
+  overflow: auto;
 }
 main.nav-margin {
   min-height: calc(100vh - 64px);
@@ -467,12 +468,9 @@ footer {
 /*Based on Modern Google Loader in Pure CSS by jczimm
 https://codepen.io/jczimm/pen/vEBpoL */
 .loader {
-  position: absolute;
   width: 50px;
   height: 50px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50px, -50%);
+  display: inline-block;
 }
 .loader .circle {
   animation: loader-rotate 2s linear infinite;
