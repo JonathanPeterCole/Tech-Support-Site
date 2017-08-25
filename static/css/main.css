@@ -370,9 +370,19 @@ footer {
   overflow: hidden;
 }
 .banner-background {
-  background: url(/static/img/main/background-grain.jpg);
   height: 100%;
   width: 100%;
+  background: url(/static/img/main/banner.jpg);
+  background-size: cover;
+}
+.banner-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, rgba(15,15,15,1), rgba(15,15,15,0.8));
 }
 .banner-content {
   text-align: center;
