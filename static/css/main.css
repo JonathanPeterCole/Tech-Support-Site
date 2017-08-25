@@ -369,6 +369,10 @@ footer {
   position: relative;
   overflow: hidden;
 }
+.banner .parallax {
+  position: relative;
+  height: 100%;
+}
 .banner-background {
   height: 100%;
   width: 100%;
