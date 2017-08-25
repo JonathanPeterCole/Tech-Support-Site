@@ -110,7 +110,6 @@ h1 {
   margin: 0 auto;
   font-size: 4em;
   font-weight: 700;
-  color: #fefefe;
 }
 h2 {
   margin: 0;
@@ -121,7 +120,6 @@ h2 {
 h3 {
   margin: 0 auto;
   font-size: 1.5em;
-  color: #fefefe;
 }
 h4 {
   margin: 0 0 20px 0;
@@ -370,11 +368,17 @@ footer {
 
 /* Banners */
 .banner {
-  height: 650px;
-  background: #131313;
+  height: 250px;
+  background: #fff;
   padding: 0;
   position: relative;
   overflow: hidden;
+}
+.banner.large {
+  height: 500px;
+}
+.banner.dark {
+  background: #0f0f0f;
 }
 .banner .parallax {
   position: relative;
@@ -385,6 +389,7 @@ footer {
   width: 100%;
   background: url(/static/img/main/banner.jpg);
   background-size: cover;
+  background-position: center;
 }
 .banner-background::after {
   content: '';
@@ -396,34 +401,54 @@ footer {
   background-image: linear-gradient(to bottom, rgba(15,15,15,1), rgba(15,15,15,0.8));
 }
 .banner-content {
-  text-align: center;
   position: absolute;
   width: 100%;
+  bottom: 50px;
+  text-align: left;
+}
+.banner.large .banner-content {
   top: 50%;
-  transform: translate(0, -50%);
+  left: 50%;
+  bottom: unset;
+  transform: translate(-50%, -50%);
+  color: #0f0f0f;
+  text-align: center;
+}
+.banner.dark .banner-content {
+  color: #fefefe;
 }
 @media (max-width: 1199px) {
   .banner {
-    height: 500px;
+    height: 180px;
+  }
+  .banner.large {
+    height: 450px;
   }
   .banner-content {
-    padding-top: 0px;
+    bottom: 35px;
   }
 }
 @media (max-width: 991px) {
   .banner {
+    height: 150px;
+  }
+  .banner.large {
     height: 400px;
   }
   .banner-content {
-    padding-top: 40px;
+    bottom: 30px;
   }
 }
 @media (max-width: 767px) {
   .banner {
-    height: 400px;
+    height: 135px;
+    margin-top: 64px;
+  }
+  .banner.large {
+    height: 300px;
   }
   .banner-content {
-    padding-top: 50px;
+    bottom: 25px;
   }
 }
 
