@@ -7,7 +7,7 @@
 //  Global Variables
 //  ------------------------------------------------------------------------
 
-var headerHeight = 64;
+var navbarHeight = 64;
 var scrollPosition = 0;
 
 //  ------------------------------------------------------------------------
@@ -34,34 +34,34 @@ $(function() {
 });
 
 //  ------------------------------------------------------------------------
-//  Header On Scroll
+//  Navbar On Scroll
 //  ------------------------------------------------------------------------
 
 $(function() {
-  // Set Header class incase user has already scrolled
-  setHeaderClass();
+  // Set Navbar class incase user has already scrolled
+  setNavbarClass();
   // On Scroll Event
   $(window).scroll(function() {
-    // Set header background opacity
-    setHeaderClass();
-    // Show or Hide the header on mobile
+    // Set navbar background opacity
+    setNavbarClass();
+    // Show or Hide the Navbar on mobile
     var newPosition = $(window).scrollTop();
-    if (newPosition > headerHeight && newPosition > scrollPosition) {
-      $("header").addClass("collapsed");
+    if (newPosition > navbarHeight && newPosition > scrollPosition) {
+      $("nav").addClass("collapsed");
     } else {
-      $("header").removeClass("collapsed");
+      $("nav").removeClass("collapsed");
     }
     scrollPosition = newPosition;
   });
 });
 
-function setHeaderClass() {
+function setNavbarClass() {
   // If the the user is not at the top of the page, add the on-scroll class,
   // otherwise remove it
   if ($(window).scrollTop() > 0) {
-    $("header").addClass("on-scroll");
+    $("nav").addClass("on-scroll");
   } else {
-    $("header").removeClass('on-scroll');
+    $("nav").removeClass('on-scroll');
   }
 }
 
@@ -121,7 +121,7 @@ $(function() {
 
 function scrollToAnchor(anchor, animation) {
   // Get the offset
-  var offset = $(anchor).offset().top - headerHeight;
+  var offset = $(anchor).offset().top - navbarHeight;
   // Ensure the offset is within the page limits
   if (offset < 0) {
     offset = 0;
