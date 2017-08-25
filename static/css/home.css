@@ -12,9 +12,6 @@
 }
 
 /* About */
-#about {
-  background: #fff;
-}
 #about img {
   height: 130px;
   width: 130px;
@@ -34,7 +31,6 @@
 
 /* Services */
 #services {
-  background: #f1f1f1;
   padding-bottom: 20px;
 }
 .service {
@@ -93,7 +89,6 @@
 
 /* Contact and Book */
 #contact-and-book {
-  background: #191919;
   padding-bottom: 30px;
 }
 .book {

@@ -204,6 +204,17 @@ h4 {
   }
 }
 
+/* Backgrounds */
+.bg-light {
+  background: #fff;
+}
+.bg-grey {
+  background: #f1f1f1;
+}
+.bg-dark {
+  background: #191919;
+}
+
 /* Gradients */
 .gradient-text {
   color: #db2525;
