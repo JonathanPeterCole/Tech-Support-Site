@@ -74,17 +74,24 @@ section {
   width: 100%;
   padding: 55px 0;
 }
-section .centered-header {
+section .header {
   width: 100%;
+  line-height: 1.15;
   margin-bottom: 45px;
+}
+section .header.center {
   text-align: center;
+}
+section .header.left {
+  text-align: left;
 }
 @media (max-width: 991px) {
   section {
     padding: 40px 0;
   }
-  section .centered-header {
+  section .header {
     margin-bottom: 35px;
+    text-align: center!important;
   }
 }
 

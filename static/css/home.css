@@ -94,33 +94,65 @@
 /* Contact and Book */
 #contact-and-book {
   background: #191919;
+  padding-bottom: 30px;
 }
-#contact-and-book h2 {
-  margin: 0;
-  line-height: 1.15;
+.book {
+  text-align: right;
 }
-#contact-and-book .contact-details {
+.book a {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  padding: 20px 70px;
+  transition: background-color 0.2s;
+  border-radius: 2px;
+  background-color: #db2525;
+  color: #fff;
+  margin: 32px 0;
+  line-height: 100%;
+}
+.book a:hover {
+  background: #96013d;
+}
+.contact-method a {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1.2em;
   text-align: center;
-  color: #dddddd;
-  font-size: 1.3em;
-  font-weight: 300;
-}
-.contact-details img {
-  margin: 10px 0 12px 0;
-  height: 50px;
-}
-.contact-details a {
   display: inline-block;
   color: #b7b7b7;
+  background-color: #252525;
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 9px 30px;
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
-.contact-details a:hover {
+.contact-method a:hover {
   color: #fff;
+  background-color: #2b2b2b;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
+}
+.contact-method img {
+  margin-bottom: 15px;
+  height: 50px;
+}
+.contact-method .name {
+  font-weight: 700;
+}
+.contact-method .text {
+  font-weight: 300;
 }
 @media (max-width: 991px) {
   #contact-and-book {
     text-align: center;
   }
-  #contact-and-book .contact-details {
-    margin-top: 20px;
+  .book {
+    text-align: center;
+  }
+  .book a {
+    width: 100%;
+    margin: 20px 0;
   }
 }
