@@ -32,20 +32,37 @@
               </svg>
             </div>
           </div>
+
           <!-- Services Page -->
           <div id="services" class="page">
+            <header class="left">
+              <h2 class="gradient-text">Select the Service you want</h2>
+            </header>
             <div class="row">
               <div class="col-md-4">
-                <a target-page="setup-form" href="#">New PC Setup</a>
+                <a class="service" target-page="setup-form" href="#">
+                  <div class="title">New PC &amp; Accessory Setup</div>
+                  <div class="price">£20</div>
+                  <div class="extra">On Site Only</div>
+                </a>
               </div>
               <div class="col-md-4">
-                <a target-page="upgrade-form" href="#">Upgrade</a>
+                <a class="service" target-page="upgrade-form" href="#">
+                  <div class="title">Upgrade</div>
+                  <div class="price">£20</div>
+                  <div class="extra">Plus Component Costs</div>
+                </a>
               </div>
               <div class="col-md-4">
-                <a target-page="repairs-form" href="#">Repairs and Virus Removal</a>
+                <a class="service" target-page="repairs-form" href="#">
+                  <div class="title">Repairs and Virus Removal</div>
+                  <div class="price">£30</div>
+                  <div class="extra">Plus Replacement Part Costs</div>
+                </a>
               </div>
             </div>
           </div>
+
           <!-- Form Page -->
           <form id="setup-form" class="page" action="/book/submit" method="post">
             Setup Form

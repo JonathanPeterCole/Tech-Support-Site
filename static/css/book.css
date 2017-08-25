@@ -8,3 +8,39 @@
   margin: 120px auto;
   text-align: center;
 }
+
+/* Services Page */
+a.service {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 9px 30px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+a.service:hover {
+  transform: scale(1.04);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
+}
+.service .title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 1.4em;
+  font-weight: 600;
+  height: 50px;
+  margin-bottom: 200px;
+}
+.service .price {
+  font-weight: 300;
+  font-size: 3em;
+  color: #db2525;
+}
+.service .extra {
+  color: #000000;
+  font-weight: 300;
+  font-size: 1.3em;
+}
