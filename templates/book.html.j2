@@ -40,21 +40,21 @@
             </header>
             <div class="row">
               <div class="col-md-4">
-                <a class="service" target-page="setup-form" href="#">
+                <a class="service" service-type="setup" target-page="setup-form" href="#">
                   <div class="title">New PC &amp; Accessory Setup</div>
                   <div class="price">£20</div>
                   <div class="extra">On Site Only</div>
                 </a>
               </div>
               <div class="col-md-4">
-                <a class="service" target-page="upgrade-form" href="#">
+                <a class="service" service-type="upgrade" target-page="upgrade-form" href="#">
                   <div class="title">Upgrade</div>
                   <div class="price">£20</div>
                   <div class="extra">Plus Component Costs</div>
                 </a>
               </div>
               <div class="col-md-4">
-                <a class="service" target-page="repairs-form" href="#">
+                <a class="service" service-type="repair" target-page="repairs-form" href="#">
                   <div class="title">Repairs and Virus Removal</div>
                   <div class="price">£30</div>
                   <div class="extra">Plus Replacement Part Costs</div>
@@ -64,15 +64,11 @@
           </div>
 
           <!-- Form Page -->
-          <form id="setup-form" class="page" action="/book/submit" method="post">
+          <form id="setup-form" class="page">
             Setup Form
             <div class="form-group">
               <label for="text-field-1">Test Field 1:</label><br>
-              <input type="text" class="form-control" name="test-field-1"><br>
-            </div>
-            <div class="form-group">
-              <label for="text-field-1">Test Field 2:</label><br>
-              <input type="text" class="form-control" name="test-field-2"><br>
+              <input type="text" class="form-control" name="test-field"><br>
             </div>
             <button type="submit">Submit</button>
           </form>
