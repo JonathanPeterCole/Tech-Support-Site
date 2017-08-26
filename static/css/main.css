@@ -79,8 +79,6 @@ section header {
   width: 100%;
   line-height: 1.15;
   margin-bottom: 45px;
-}
-section header.center {
   text-align: center;
 }
 section header.left {
@@ -92,7 +90,9 @@ section header.left {
   }
   section header {
     margin-bottom: 35px;
-    text-align: center!important;
+  }
+  section header.mobile-center {
+    text-align: center;
   }
 }
 
