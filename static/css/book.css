@@ -26,11 +26,7 @@ a.service:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
 }
 .service .title {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
   color: #333;
-  font-size: 1.4em;
-  font-weight: 600;
   height: 50px;
   margin-bottom: 200px;
 }
