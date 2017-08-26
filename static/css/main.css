@@ -381,16 +381,13 @@ footer {
 /* Banners */
 .banner {
   height: 300px;
-  background: #fff;
+  background: #0f0f0f;
   padding: 0;
   position: relative;
   overflow: hidden;
 }
 .banner.large {
   height: 500px;
-}
-.banner.dark {
-  background: #0f0f0f;
 }
 .banner .parallax {
   position: relative;
@@ -417,17 +414,14 @@ footer {
   width: 100%;
   bottom: 50px;
   text-align: left;
+  color: #fefefe;
 }
 .banner.large .banner-content {
   top: 50%;
   left: 50%;
   bottom: unset;
   transform: translate(-50%, -50%);
-  color: #0f0f0f;
   text-align: center;
-}
-.banner.dark .banner-content {
-  color: #fefefe;
 }
 @media (max-width: 1199px) {
   .banner {
