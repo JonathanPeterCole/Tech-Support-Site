@@ -112,6 +112,7 @@ h1 {
 h2 {
   margin: 0 auto;
   font-size: 3.8rem;
+  display: inline-block;
 }
 h3 {
   margin: 0 0 20px 0;
