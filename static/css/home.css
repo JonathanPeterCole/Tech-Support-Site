@@ -39,7 +39,7 @@
   border-radius: 3px;
   transition: 0.2s;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0) 0px 9px 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
 }
 .service:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
