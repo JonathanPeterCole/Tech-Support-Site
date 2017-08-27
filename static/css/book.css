@@ -40,3 +40,12 @@ a.service:hover {
   font-weight: 300;
   font-size: 1.3em;
 }
+
+/* Form Pages */
+.form-container {
+  width: 100%;
+  padding: 50px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+}
