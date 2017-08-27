@@ -6,17 +6,37 @@
 // Prepare the page Manager and service type variable
 var bookingPageManager = new pageManager('#page-container');
 var serviceType;
+var siteType;
 
 // Open the switch to the form page when done loading
 $(window).on("load", function() {
-  bookingPageManager.setPage('services');
+  bookingPageManager.setPage('service-selection');
 });
 
 $(function() {
   // Service Selection
-  $("#services a").click(function(event) {
-    serviceType = $(this).attr('service-type');
-    bookingPageManager.setPage($(this).attr('target-page'));
+  $("#service-selection a").click(function(event) {
+    // Remember the service type
+    serviceType = $(this).attr("service-type");
+    // Change Page
+    if(serviceType == "setup") {
+      siteType = null;
+      bookingPageManager.setPage("setup-form");
+    } else if (serviceType == "upgrade" || serviceType == "repair") {
+      bookingPageManager.setPage("site-selection");
+    }
+  });
+
+  // Site Selection
+  $("#site-selection a").click(function(event) {
+    // Remember the site type
+    siteType = $(this).attr("site-type");
+    // Change page
+    if(serviceType == "upgrade") {
+      bookingPageManager.setPage("upgrade-form");
+    } else if (serviceType == "repair") {
+      bookingPageManager.setPage("repair-form");
+    }
   });
 
   // Submit action
@@ -25,9 +45,12 @@ $(function() {
     event.preventDefault();
     // Prepare the form date
     var bookingInfo = getFormData($(this));
-    bookingInfo['service-type'] = serviceType;
+    bookingInfo["service-type"] = serviceType;
+    if (siteType) {
+      bookingInfo["site-type"] = siteType;
+    }
     // Submit the data
-    submitData('/book/submit', bookingInfo);
+    submitData("/book/submit", bookingInfo);
   });
 });
 

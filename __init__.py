@@ -18,8 +18,10 @@ def book():
 def submit_booking():
     # Get the form data
     json_data = request.get_json()
-    # Put the json data into string and return it
-    result = "Selected Service: " + json_data['service-type'] + "<br>Test Field: " + json_data['test-field']
+    # Put the data into a string and return it
+    result = "";
+    for key, value in json_data.items():
+        result += key + ": " + value + "<br>"
     return result
 
 @app.route('/robots.txt')
