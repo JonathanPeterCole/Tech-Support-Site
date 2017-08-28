@@ -108,13 +108,16 @@ $(function() {
     if (targetAnchor && currentUrl == targetUrl) {
       // Prevent the default link action
       event.preventDefault();
-      // Scroll to the anchor and close the mobile nav menu if it's open
+      // Scroll to the anchor
       if ($(".navbar-list").hasClass("open")) {
         scrollToAnchor("#" + targetAnchor, 0)
-        toggleMobileNav();
       } else {
         scrollToAnchor("#" + targetAnchor, 300)
       }
+    }
+    // Close the mobile nav-menu if it's open
+    if ($(".navbar-list").hasClass("open")) {
+      toggleMobileNav();
     }
   });
 });
