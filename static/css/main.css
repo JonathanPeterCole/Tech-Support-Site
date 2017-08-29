@@ -52,6 +52,7 @@ a,
 a:active,
 a:hover,
 a:focus {
+  cursor: pointer;
   text-decoration: none;
   transition: color 0.2s;
 }
