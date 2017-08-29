@@ -480,14 +480,16 @@ input.form-control {
   border-radius: 2px;
   color: #000;
   border: 1px solid #e8e8e8;
-  padding: 20px 15px;
+  padding: 10px 15px;
+  height: auto;
 }
 textarea.form-control {
   box-shadow: none;
   border-radius: 2px;
   color: #000;
   border: 1px solid #e8e8e8;
-  padding: 20px 15px;
+  padding: 10px 15px;
+  height: auto;
 }
 .form-group {
   margin-bottom: 20px;
