@@ -466,6 +466,33 @@ footer {
   }
 }
 
+/* Forms */
+label {
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: Roboto;
+  margin-bottom: 10px;
+  color: #828282;
+}
+input.form-control {
+  box-shadow: none;
+  border-radius: 2px;
+  color: #000;
+  border: 1px solid #e8e8e8;
+  padding: 20px 15px;
+}
+textarea.form-control {
+  box-shadow: none;
+  border-radius: 2px;
+  color: #000;
+  border: 1px solid #e8e8e8;
+  padding: 20px 15px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+
 /* Loading Spinner */
 /*Based on Modern Google Loader in Pure CSS by jczimm
 https://codepen.io/jczimm/pen/vEBpoL */
