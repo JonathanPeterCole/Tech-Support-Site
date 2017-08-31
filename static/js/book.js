@@ -3,8 +3,9 @@
   * @author JonathanPeterCole@gmail.com
 **/
 
-// Prepare the page Manager and service type variable
+// Prepare page manager, form validator, and variables
 var bookingPageManager = new pageManager('#page-container');
+var validator = new formValidator();
 var serviceType;
 var siteType;
 
@@ -43,16 +44,46 @@ $(function() {
   $("form").submit(function(event) {
     // Prevent the usual form submit action
     event.preventDefault();
-    // Prepare the form date
-    var bookingInfo = getFormData($(this));
-    bookingInfo["service-type"] = serviceType;
-    if (siteType) {
-      bookingInfo["site-type"] = siteType;
+    // Check the validity of the form fields
+    if (validateForm($(this))) {
+      // Prepare the form date
+      var bookingInfo = getFormData($(this));
+      bookingInfo["service-type"] = serviceType;
+      if (siteType) {
+        bookingInfo["site-type"] = siteType;
+      }
+      // Submit the data
+      submitData("/book/submit", bookingInfo);
+    } else {
+      alert("The form is invalid");
     }
-    // Submit the data
-    submitData("/book/submit", bookingInfo);
+  });
+
+  $("form .validated").change(function() {
+    // On a form input change, validate the new value
+    validate($(this));
   });
 });
+
+function validateForm(form) {
+  // Check all the form fields and return the validation result
+  var formIsValid = true;
+  $(form).find(".validated").each(function(){
+    if (!validator.validateField($(this))) {
+      formIsValid = false;
+    }
+  });
+  return formIsValid;
+}
+
+function validate(field) {
+  // Check the field and display the result in an alert
+  if (validator.validateField(field)) {
+    alert("Valid");
+  } else {
+    alert("Invalid");
+  }
+}
 
 function getFormData(form) {
   // Get the form data data and add it to an associative array
