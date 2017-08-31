@@ -54,8 +54,6 @@ $(function() {
       }
       // Submit the data
       submitData("/book/submit", bookingInfo);
-    } else {
-      alert("The form is invalid");
     }
   });
 
@@ -69,7 +67,7 @@ function validateForm(form) {
   // Check all the form fields and return the validation result
   var formIsValid = true;
   $(form).find(".validated").each(function(){
-    if (!validator.validateField($(this))) {
+    if (!validate($(this))) {
       formIsValid = false;
     }
   });
@@ -79,9 +77,11 @@ function validateForm(form) {
 function validate(field) {
   // Check the field and display the result in an alert
   if (validator.validateField(field)) {
-    alert("Valid");
+    field.removeClass("invalid");
+    return true;
   } else {
-    alert("Invalid");
+    field.addClass("invalid");
+    return false;
   }
 }
 
