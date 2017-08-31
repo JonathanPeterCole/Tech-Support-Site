@@ -11,7 +11,10 @@ var siteType;
 
 // Open the switch to the form page when done loading
 $(window).on("load", function() {
-  bookingPageManager.setPage('service-selection');
+  // Wait an additional second after load to allow fonts to load
+  setTimeout(function() {
+    bookingPageManager.setPage('service-selection');
+  }, 1000);
 });
 
 $(function() {
