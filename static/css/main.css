@@ -478,15 +478,7 @@ label {
 label .highlight {
   color: #db2525;
 }
-input.form-control {
-  box-shadow: none;
-  border-radius: 2px;
-  color: #000;
-  border: 1px solid #e8e8e8;
-  padding: 10px 15px;
-  height: auto;
-}
-textarea.form-control {
+.form-control {
   box-shadow: none;
   border-radius: 2px;
   color: #000;
