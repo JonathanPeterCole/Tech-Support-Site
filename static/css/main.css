@@ -72,6 +72,33 @@ main.nav-margin {
   min-height: calc(100vh - 64px);
   margin-top: 64px;
 }
+button {
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  height: 44px;
+  padding: 0 24px;
+  transition: background-color 0.2s;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #000;
+  margin-left: 10px;
+  line-height: 45px;
+  border: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
+}
+button:hover {
+  background-color: #f9f9f9;
+}
+button.highlight {
+  color: #fff;
+  background-color: #db2525;
+}
+button.highlight:hover {
+  background-color: #96013d;
+}
 section {
   width: 100%;
   padding: 55px 0;
