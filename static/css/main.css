@@ -503,9 +503,6 @@ label .highlight {
 .form-group {
   margin-bottom: 20px;
 }
-form .button-container {
-  float: right;
-}
 
 /* Loading Spinner */
 /*Based on Modern Google Loader in Pure CSS by jczimm

@@ -38,6 +38,9 @@ a.selection-block:hover {
   font-weight: 300;
   font-size: 1.3em;
 }
+.page .button-container {
+  float: right;
+}
 
 /* Loading Page */
 .loading-container {
