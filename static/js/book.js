@@ -13,7 +13,7 @@ var siteType;
 $(window).on("load", function() {
   // Wait an additional second after load to allow fonts to load
   setTimeout(function() {
-    bookingPageManager.setPage('service-selection');
+    bookingPageManager.setPage('service-selection', true);
   }, 1000);
 });
 
@@ -25,9 +25,9 @@ $(function() {
     // Change Page
     if(serviceType == "setup") {
       siteType = null;
-      bookingPageManager.setPage("setup-form");
+      bookingPageManager.setPage("setup-form", true);
     } else if (serviceType == "upgrade" || serviceType == "repair") {
-      bookingPageManager.setPage("site-selection");
+      bookingPageManager.setPage("site-selection", true);
     }
   });
 
@@ -37,9 +37,9 @@ $(function() {
     siteType = $(this).attr("site-type");
     // Change page
     if(serviceType == "upgrade") {
-      bookingPageManager.setPage("upgrade-form");
+      bookingPageManager.setPage("upgrade-form", true);
     } else if (serviceType == "repair") {
-      bookingPageManager.setPage("repair-form");
+      bookingPageManager.setPage("repair-form", true);
     }
   });
 
@@ -63,6 +63,10 @@ $(function() {
   $("form .validated").on('focus keyup change', function() {
     // Validate the current field
     validate($(this));
+  });
+
+  $(".page .back").click(function(event) {
+    bookingPageManager.goBack();
   });
 });
 
@@ -109,11 +113,11 @@ function submitData(url, data) {
     contentType: 'application/json;charset=UTF-8',
     success: function(response) {
       $('#received-data').html(response);
-      bookingPageManager.setPage('result');
+      bookingPageManager.setPage('result', true);
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
       $('#received-data').html("Error: " + errorThrown);
-      bookingPageManager.setPage('result');
+      bookingPageManager.setPage('result', true);
     }
   });
 }
