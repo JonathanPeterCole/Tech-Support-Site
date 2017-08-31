@@ -108,11 +108,11 @@ function submitData(url, data) {
     data: JSON.stringify(data),
     contentType: 'application/json;charset=UTF-8',
     success: function(response) {
-      $('#result').html(response);
+      $('#received-data').html(response);
       bookingPageManager.setPage('result');
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
-      $('#result').html("Error: " + errorThrown);
+      $('#received-data').html("Error: " + errorThrown);
       bookingPageManager.setPage('result');
     }
   });

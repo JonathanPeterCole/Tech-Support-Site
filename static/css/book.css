@@ -53,3 +53,14 @@ a.selection-block:hover {
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
 }
+
+/* Result */
+.result-container {
+  margin: 0 auto;
+  max-width: 738px;
+  padding: 50px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+  text-align: center;
+}
