@@ -486,17 +486,26 @@ label .highlight {
   padding: 10px 15px;
   height: auto;
 }
+.form-control:focus {
+  border-color: #26db25;
+  outline: 0;
+  box-shadow: rgba(37, 219, 61, 0.2) 0px 0px 8px;
+}
+.form-control.invalid {
+  border: 1px solid #de8080;
+  background: #fef6f6;
+}
+.form-control.invalid:focus {
+  border-color: #db2525;
+  outline: 0;
+  box-shadow: rgba(219, 37, 37, 0.2) 0px 0px 8px;
+}
 .form-group {
   margin-bottom: 20px;
-}
-form .invalid {
-  border: 1px solid #de8080!important;
-  background: rgba(219, 37, 37, 0.05);
 }
 form .button-container {
   float: right;
 }
-
 
 /* Loading Spinner */
 /*Based on Modern Google Loader in Pure CSS by jczimm
