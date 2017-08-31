@@ -493,6 +493,9 @@ form .invalid {
   border: 1px solid #de8080!important;
   background: rgba(219, 37, 37, 0.05);
 }
+form .button-container {
+  float: right;
+}
 
 
 /* Loading Spinner */
