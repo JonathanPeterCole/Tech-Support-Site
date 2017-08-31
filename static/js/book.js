@@ -57,8 +57,8 @@ $(function() {
     }
   });
 
-  $("form .validated").change(function() {
-    // On a form input change, validate the new value
+  $("form .validated").on('focus keyup change', function() {
+    // Validate the current field
     validate($(this));
   });
 });
