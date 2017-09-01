@@ -24,10 +24,22 @@
 
 /* Page Controls */
 .page-controls .page-status {
+  display: none;
   text-align: left;
-  height: 45px;
-  line-height: 44px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #db2525;
+}
+.page-controls .page-status.show {
+  display: block;
 }
 .page-controls .page-buttons {
   text-align: right;
+}
+@media (max-width: 991px) {
+  .page-controls .page-status {
+    text-align: center;
+  }
 }

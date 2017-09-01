@@ -66,7 +66,10 @@ $(function() {
   });
 
   $(".page .back").click(function(event) {
+    // Go back
     bookingPageManager.goBack();
+    // Hide the page status
+    $('.page-controls .page-status').removeClass("show");
   });
 });
 
@@ -104,7 +107,7 @@ function getFormData(form) {
 
 function submitData(url, data) {
   // Switch to the loading page
-  bookingPageManager.setPage('loading', false);
+  bookingPageManager.setPage('loading', true);
   // Make an AJAX call and display the results
   $.ajax({
     url: url,
@@ -116,8 +119,8 @@ function submitData(url, data) {
       bookingPageManager.setPage('result', true);
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
-      $('#received-data').html("Error: " + errorThrown);
-      bookingPageManager.setPage('result', true);
+      $('.page-controls .page-status').addClass("show");
+      bookingPageManager.goBack();
     }
   });
 }
