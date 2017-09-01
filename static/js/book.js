@@ -13,7 +13,7 @@ var siteType;
 $(window).on("load", function() {
   // Wait an additional second after load to allow fonts to load
   setTimeout(function() {
-    bookingPageManager.setPage('service-selection', true);
+    bookingPageManager.setPage('service-selection', false);
   }, 1000);
 });
 
@@ -104,7 +104,7 @@ function getFormData(form) {
 
 function submitData(url, data) {
   // Switch to the loading page
-  bookingPageManager.setPage('loading');
+  bookingPageManager.setPage('loading', false);
   // Make an AJAX call and display the results
   $.ajax({
     url: url,
