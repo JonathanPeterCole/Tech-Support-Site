@@ -3,6 +3,7 @@
   * @author JonathanPeterCole@gmail.com
 **/
 
+/* Pages */
 .page {
   display: none;
   height: 100%;
@@ -19,4 +20,17 @@
 @keyframes pageFadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+/* Page Controls */
+.page-controls {
+
+}
+.page-controls .page-status {
+  text-align: left;
+  height: 45px;
+  line-height: 44px;
+}
+.page-controls .page-buttons {
+  text-align: right;
 }

@@ -38,9 +38,6 @@ a.selection-block:hover {
   font-weight: 300;
   font-size: 1.3em;
 }
-.page .button-container {
-  float: right;
-}
 
 /* Loading Page */
 .loading-container {
@@ -51,7 +48,8 @@ a.selection-block:hover {
 /* Form Pages */
 .form-container {
   width: 100%;
-  padding: 50px;
+  padding: 35px 50px;
+  margin-bottom: 20px;
   border-radius: 3px;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
