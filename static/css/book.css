@@ -33,10 +33,22 @@ a.selection-block:hover {
   font-size: 3em;
   color: #db2525;
 }
-.selection-block .extra {
-  color: #000000;
-  font-weight: 300;
-  font-size: 1.3em;
+@media (max-width: 1199px) {
+  a.selection-block {
+    padding: 30px;
+  }
+}
+@media (max-width: 991px) {
+  a.selection-block {
+    padding: 25px;
+  }
+  .selection-block .icon {
+    height: 50px;
+    margin: 10px 0 20px;
+  }
+  .selection-block .price {
+    font-size: 2em;
+  }
 }
 
 /* Loading Page */
