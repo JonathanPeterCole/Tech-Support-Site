@@ -16,6 +16,41 @@ The icons, including the favicon for this site, were generated using [Real Favic
 
 ## Setup
 
+### Configuring the Site
+In this example, I'm using Gmail for the mail server. However, free email services like Gmail usually have restrictions in place to limit the frequency at which the account can be used the send emails, so it's recommended that you setup your own mail server or pay for a service without restrictions. If you do want to use Gmail though and you have two step authentication, you can set up an app password which you can use for Flask-Mail.
+
+###### Creating the Config File
+
+1. In the same folder as `__init__.py`, create a file named config.py.
+
+2. In the config.py file, add the following, replacing fields with the appropriate configuration for the mail server you are using. I am using environment variables here to keep the account credentials separate from the app.
+```
+import os
+
+class BaseConfig(object):
+    # Flask
+    DEBUG = False
+    ALLOWED_EXTENSIONS = set(['txt', 'png', 'jpg', 'jpeg'])
+
+    # Flask-Mail
+    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_PORT = 465
+    MAIL_USE_SSL = True
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_DEFAULT_SENDER = os.environ.get('MAIL_USERNAME')
+```
+
+###### Setting an Environment Variable on Ubuntu
+
+1. Navigate to `/etc/`.
+
+2. Edit the environment file and add your environment variables as new lines, like so:
+```
+MAIL_USERNAME="username123@mail.com"
+MAIL_PASSWORD="password123"
+```
+
 ### Deploying the Site on a DigitalOcean Droplet
 For other projects, instances of Tech-Support-Site can be replaced with an appropriate project name.  
 *Reference: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps*

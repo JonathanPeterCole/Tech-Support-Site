@@ -3,7 +3,7 @@ from flask import Flask, redirect, request, render_template, send_from_directory
 from flask_mail import Mail, Message
 
 app = Flask (__name__)
-ALLOWED_EXTENSIONS = set(['txt', 'png', 'jpg', 'jpeg'])
+app.config.from_object("config.BaseConfig")
 mail = Mail(app)
 
 @app.route("/")
