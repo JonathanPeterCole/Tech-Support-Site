@@ -1,4 +1,4 @@
-import os
+import os, validation
 from flask import Flask, redirect, request, render_template, send_from_directory, abort
 from flask_mail import Mail, Message
 
@@ -19,33 +19,12 @@ def submit_booking():
     # Get the form data
     json_data = request.get_json()
     # Validate the received data
-    if json_data and validate(json_data):
+    if json_data and validation.validate(json_data):
         if send_booking_mail(json_data):
             return "success"
+
     # Validation failed or the email could not be sent, so return "error"
     return "error"
-
-def validate(received_data):
-    # Check that the received data contains the correct keys
-    if "service-type" in received_data:
-        if (received_data["service-type"] == "setup"):
-            return match_dict_keys(received_data, ["service-type", "name", "email", "phone", "pc-model", "accessory", "win-ver", "message"])
-        elif (received_data["service-type"] == "upgrade"):
-            return match_dict_keys(received_data, ["service-type", "site-type", "name", "email", "phone", "pc-model", "win-ver", "upgrade-type", "message"])
-        elif (received_data["service-type"] == "repair"):
-            return match_dict_keys(received_data, ["service-type", "site-type", "name", "email", "phone", "pc-model", "win-ver", "error", "message"])
-    return False
-
-def match_dict_keys(dictionary, keys):
-    match = True
-    # Check that the keys exist
-    for key in keys:
-        if key not in dictionary:
-            match = False
-    # Check that the length is correct
-    if len(dictionary) != len(keys):
-        match = False
-    return match
 
 def send_booking_mail(booking_info):
     # Prepare the body of the message
