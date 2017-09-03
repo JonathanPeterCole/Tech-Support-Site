@@ -1,0 +1,6 @@
+<p>New Booking from {{ data['name'] }}</p>
+<p>
+  {%for key,value in  data.items() %}
+    <b>{{key}}: </b>{{value}}<br>
+  {% endfor %}
+</p>

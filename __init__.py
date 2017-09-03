@@ -1,5 +1,5 @@
 import os
-from flask import Flask, redirect, request, render_template, send_from_directory
+from flask import Flask, redirect, request, render_template, send_from_directory, abort
 from flask_mail import Mail, Message
 
 app = Flask (__name__)
@@ -18,11 +18,24 @@ def book():
 def submit_booking():
     # Get the form data
     json_data = request.get_json()
-    # Put the data into a string and return it
-    result = "";
-    for key, value in json_data.items():
-        result += key + ": " + value + "<br>"
-    return result
+    if (send_booking_mail(json_data)):
+        return "success"
+    else:
+        return "error"
+
+def send_booking_mail(booking_info):
+    # Prepare the body of the message
+    mail_body = render_template("emails/new-booking.html.j2", data = booking_info)
+    # Prepare the email
+    email = Message("New Booking from " + booking_info["name"],
+        html = mail_body,
+        recipients = [app.config["BOOKING_EMAIL_TARGET"]])
+    # Send the email
+    try:
+        mail.send(email)
+    except:
+        return False
+    return True
 
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')

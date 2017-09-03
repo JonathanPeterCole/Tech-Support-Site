@@ -23,7 +23,7 @@ In this example, I'm using Gmail for the mail server. However, free email servic
 
 1. In the same folder as `__init__.py`, create a file named config.py.
 
-2. In the config.py file, add the following, replacing fields with the appropriate configuration for the mail server you are using. I am using environment variables here to keep the account credentials separate from the app.
+2. In the config.py file, add the following, replacing variables under `Flask Mail` with the appropriate configuration for the mail server you are using, and the `BOOKING_EMAIL_TARGET` email with the email you would like bookings to be sent to. I am using environment variables here to keep the account credentials separate from the app.
 ```
 import os
 
@@ -32,13 +32,17 @@ class BaseConfig(object):
     DEBUG = False
     ALLOWED_EXTENSIONS = set(['txt', 'png', 'jpg', 'jpeg'])
 
-    # Flask-Mail
+    # Flask Mail
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 465
     MAIL_USE_SSL = True
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MAIL_DEFAULT_SENDER = os.environ.get('MAIL_USERNAME')
+
+    # App Settings
+    BOOKING_EMAIL_TARGET = Bookings@email.com
+
 ```
 
 ###### Setting an Environment Variable on Ubuntu

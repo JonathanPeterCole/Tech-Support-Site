@@ -115,12 +115,19 @@ function submitData(url, data) {
     data: JSON.stringify(data),
     contentType: 'application/json;charset=UTF-8',
     success: function(response) {
-      $('#received-data').html(response);
-      bookingPageManager.setPage('result', true);
+      if (response == "success") {
+        bookingPageManager.setPage('result', true);
+      } else {
+        submitError();
+      }
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
-      $('.page-controls .page-status').addClass("show");
-      bookingPageManager.goBack();
+      submitError();
     }
   });
+}
+
+function submitError() {
+  $('.page-controls .page-status').addClass("show");
+  bookingPageManager.goBack();
 }
