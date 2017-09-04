@@ -1,6 +1,45 @@
-<p>New Booking from {{ data['name'] }}</p>
-<p>
-  {%for key,value in  data.items() %}
-    <b>{{key}}: </b>{{value}}<br>
-  {% endfor %}
-</p>
+<html>
+  <head></head>
+  <body>
+    <h1>New Booking from {{ data['name'] }}</h1>
+
+    <h2>Customer Details</h2>
+    <p>
+      <b>Name:</b> {{ data['name'] }}<br>
+      <b>Email:</b> {{ data['email'] }}<br>
+      {% if data['phone'] is defined %}
+        <b>Phone Number:</b> {{ data['phone'] }}
+      {% endif %}
+    </p>
+
+    <h2>Service Details</h2>
+    <p>
+      {% if data['service-type'] is defined %}
+        <b>Service Type:</b> {{ data['service-type'] }}<br>
+      {% endif %}
+      {% if data['site-type'] is defined %}
+        <b>Site Type:</b> {{ data['site-type'] }}<br>
+      {% endif %}
+      {% if data['pc-model'] is defined %}
+        <b>PC Make and Model:</b> {{ data['pc-model'] }}<br>
+      {% endif %}
+      {% if data['accessory'] is defined %}
+        <b>New Accessory:</b> {{ data['accessory'] }}<br>
+      {% endif %}
+      {% if data['win-ver'] is defined %}
+        <b>Windows Version:</b> {{ data['win-ver'] }}<br>
+      {% endif %}
+      {% if data['error'] is defined %}
+        <b>Error:</b> {{ data['error'] }}<br>
+      {% endif %}
+      {% if data['upgrade-type'] is defined %}
+        <b>Upgrade Type:</b> {{ data['upgrade-type'] }}
+      {% endif %}
+    </p>
+
+    <h2>Message</h2>
+    <p>
+      {{ data['message'] }}
+    </p>
+  </body>
+</html>
