@@ -1,5 +1,5 @@
 import os, validation
-from flask import Flask, redirect, request, render_template, send_from_directory, abort
+from flask import Flask, redirect, request, render_template, send_from_directory, escape
 from flask_mail import Mail, Message
 
 app = Flask (__name__)
@@ -20,10 +20,16 @@ def submit_booking():
     json_data = request.get_json()
     # Validate the received data
     if json_data and validation.validate(json_data):
+        escape_values(json_data)
         if send_booking_mail(json_data):
             return "success"
     # Validation failed or the email could not be sent, so return "error"
     return "error"
+
+def escape_values(data):
+    # Escape all the values in the dictionary
+    for key, value in data.items():
+        data[key] = escape(value)
 
 def send_booking_mail(booking_info):
     # Prepare the body of the message
