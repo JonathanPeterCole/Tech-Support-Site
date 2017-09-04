@@ -8,7 +8,6 @@
 //  ------------------------------------------------------------------------
 
 var navbarHeight = 64;
-var scrollPosition = 0;
 
 //  ------------------------------------------------------------------------
 //  Fade In On Load
@@ -26,10 +25,12 @@ $(window).on("load", function() {
 $(function() {
   // On Scroll Event
   $(window).scroll(function() {
-    // Get half the scroll distance
-    var parallax = $(window).scrollTop()/3;
-    // Apply a transform to the banner background
-    $(".parallax").css({"transform": "translateY(" + parallax +"px"})
+    if ( $(window).width() >= 992) {
+      // Get half the scroll distance
+      var parallax = $(window).scrollTop()/3;
+      // Apply a transform to the banner background
+      $(".parallax").css({"transform": "translateY(" + parallax +"px)"})
+    }
   });
 });
 
@@ -44,14 +45,6 @@ $(function() {
   $(window).scroll(function() {
     // Set navbar background opacity
     setNavbarClass();
-    // Show or Hide the Navbar on mobile
-    var newPosition = $(window).scrollTop();
-    if (newPosition > navbarHeight && newPosition > scrollPosition) {
-      $("nav").addClass("collapsed");
-    } else {
-      $("nav").removeClass("collapsed");
-    }
-    scrollPosition = newPosition;
   });
 });
 
@@ -131,8 +124,6 @@ function scrollToAnchor(anchor, animation) {
   } else if (offset > $(document).height() - $(window).height()) {
     offset = $(document).height() - $(window).height()
   }
-  // Set the scroll position variable to prevent the navbar being hidden
-  scrollPosition = offset;
   // Scroll to the target and close the mobile nav menu if it's open
   $('html,body').animate({scrollTop: offset}, animation);
 }
