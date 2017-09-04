@@ -263,10 +263,12 @@ nav {
   height: 64px;
   position: fixed;
   top: 0;
-  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
   background: rgba(255, 255, 255, 0);
   box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 5px;
   z-index: 1000;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 nav.on-scroll {
   background: rgb(255, 255, 255);
@@ -357,10 +359,10 @@ nav.on-scroll {
     padding-top: 64px;
     transition: transform 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 0px 5px;
-    transform: translateX(calc(-100% - 5px));
+    transform: translate3d(calc(-100% - 5px), 0, 0);
   }
   .navbar-list.open {
-    transform: none;
+    transform: translate3d(0, 0, 0);
   }
   .navbar-list li {
     float: none;
