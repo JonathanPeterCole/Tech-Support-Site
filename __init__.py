@@ -1,4 +1,4 @@
-import os, validation
+import os, requests, validation
 from flask import Flask, redirect, request, render_template, send_from_directory, escape
 from flask_mail import Mail, Message
 
@@ -12,20 +12,41 @@ def index():
 
 @app.route("/book")
 def book():
-    return render_template('book.html.j2')
+    return render_template('book.html.j2', site_key = app.config.get("RECAPTCHA_SITE_KEY"))
 
 @app.route("/book/submit", methods = ['POST'])
 def submit_booking():
     # Get the form data
     json_data = request.get_json()
     # Validate the received data
-    if json_data and validation.validate(json_data):
-        escape_values(json_data)
-        convert_newlines(json_data)
-        if send_booking_mail(json_data):
-            return "success"
+    if ("g-recaptcha-response" in json_data.keys() and
+        check_recaptcha(json_data.pop("g-recaptcha-response"), request.remote_addr)):
+        # Validate the received data
+        if json_data and validation.validate(json_data):
+            escape_values(json_data)
+            convert_newlines(json_data)
+            if send_booking_mail(json_data):
+                return "success"
     # Validation failed or the email could not be sent, so return "error"
     return "error"
+
+def check_recaptcha(response, ip):
+    # Prepare the recaptcha verification_data
+    verification_data = {
+        "secret": app.config.get("RECAPTCHA_SECRET_KEY"),
+        "response": response,
+        "remoteip": ip
+    }
+    # Make the request
+    request = requests.get(
+        app.config.get("RECAPTCHA_VERIFY_URL"),
+        params = verification_data
+    )
+    # Check the request results
+    if request.json()["success"]:
+        return True
+    else:
+        return False
 
 def convert_newlines(data):
     # Replace all \n's with <br>

@@ -130,3 +130,7 @@ function submitError() {
   $('.page-controls .page-status').addClass("show");
   bookingPageManager.goBack();
 }
+
+function enableSubmit(){
+  $('form button').prop("disabled", false);
+}

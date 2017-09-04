@@ -10,6 +10,7 @@
   <script src="/static/js/components/page-manager.js" defer></script>
   <script src="/static/js/components/form-validation.js" defer></script>
   <script src="/static/js/book.js" defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" defer></script>
 {% endblock %}
 
 {% block body %}
@@ -115,6 +116,14 @@
                     {% include "forms/repair-form.html.j2" %}
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Beep Boop? <span class="highlight">(Required)</span></label>
+                      <div class="g-recaptcha" data-sitekey="{{ site_key }}" data-callback="enableSubmit"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="row page-controls">
                 <div class="col-md-6">
@@ -124,12 +133,12 @@
                 </div>
                 <div class="col-md-6 page-buttons">
                   <button class="back" type="button">Back</button>
-                  <button class="highlight" type="submit">Submit Booking</button>
+                  <button class="highlight" type="submit" disabled>Submit Booking</button>
                 </div>
               </div>
             </form>
           </div>
-          
+
           <!-- Results Page -->
           <div id="result" class="page hidden">
             <header class="left">
