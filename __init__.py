@@ -22,7 +22,6 @@ def submit_booking():
     if json_data and validation.validate(json_data):
         escape_values(json_data)
         convert_newlines(json_data)
-        print(json_data)
         if send_booking_mail(json_data):
             return "success"
     # Validation failed or the email could not be sent, so return "error"
