@@ -7,32 +7,30 @@
     <p>
       <b>Name:</b> {{ data['name'] }}<br>
       <b>Email:</b> {{ data['email'] }}<br>
-      {% if data['phone'] is defined %}
+      {% if data['phone'] %}
         <b>Phone Number:</b> {{ data['phone'] }}
       {% endif %}
     </p>
 
     <h2>Service Details</h2>
     <p>
-      {% if data['service-type'] is defined %}
-        <b>Service Type:</b> {{ data['service-type'] }}<br>
-      {% endif %}
-      {% if data['site-type'] is defined %}
+      <b>Service Type:</b> {{ data['service-type'] }}<br>
+      {% if data['site-type'] %}
         <b>Site Type:</b> {{ data['site-type'] }}<br>
       {% endif %}
-      {% if data['pc-model'] is defined %}
+      {% if data['pc-model'] %}
         <b>PC Make and Model:</b> {{ data['pc-model'] }}<br>
       {% endif %}
-      {% if data['accessory'] is defined %}
+      {% if data['accessory'] %}
         <b>New Accessory:</b> {{ data['accessory'] }}<br>
       {% endif %}
-      {% if data['win-ver'] is defined %}
+      {% if data['win-ver'] %}
         <b>Windows Version:</b> {{ data['win-ver'] }}<br>
       {% endif %}
-      {% if data['error'] is defined %}
+      {% if data['error'] %}
         <b>Error:</b> {{ data['error'] }}<br>
       {% endif %}
-      {% if data['upgrade-type'] is defined %}
+      {% if data['upgrade-type'] %}
         <b>Upgrade Type:</b> {{ data['upgrade-type'] }}
       {% endif %}
     </p>
