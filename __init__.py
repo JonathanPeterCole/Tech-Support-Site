@@ -21,10 +21,17 @@ def submit_booking():
     # Validate the received data
     if json_data and validation.validate(json_data):
         escape_values(json_data)
+        convert_newlines(json_data)
+        print(json_data)
         if send_booking_mail(json_data):
             return "success"
     # Validation failed or the email could not be sent, so return "error"
     return "error"
+
+def convert_newlines(data):
+    # Replace all \n's with <br>
+    for key, value in data.items():
+        data[key] = "<br>".join(value.split("\r"))
 
 def escape_values(data):
     # Escape all the values in the dictionary
