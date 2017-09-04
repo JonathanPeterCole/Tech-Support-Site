@@ -65,9 +65,6 @@
   width: 100%;
   transition: 0.2s ease;
 }
-.service:hover img {
-  transform: scale(1.08);
-}
 .service .text p {
   margin: 20px 0;
 }
