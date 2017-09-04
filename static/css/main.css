@@ -269,6 +269,7 @@ nav {
   z-index: 1000;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+  will-change: transform;
 }
 nav.on-scroll {
   background: rgb(255, 255, 255);
@@ -307,6 +308,7 @@ nav.on-scroll {
   padding: 0;
   list-style-type: none;
   float: right;
+  will-change: transform;
 }
 .navbar-list li {
   float: left;
