@@ -24,14 +24,14 @@ $(window).on("load", function() {
 
 $(function() {
   // On Scroll Event
-  $(window).scroll(function() {
-    if ( $(window).width() >= 992) {
-      // Get half the scroll distance
-      var parallax = $(window).scrollTop()/3;
-      // Apply a transform to the banner background
-      $(".parallax").css({"transform": "translateY(" + parallax +"px)"})
-    }
-  });
+  if ($(window).width() > 767) {
+    $(window).scroll(function() {
+        // Get half the scroll distance
+        var parallax = $(window).scrollTop()/3;
+        // Apply a transform to the banner background
+        $(".parallax").css({"transform": "translateY(" + parallax +"px)"})
+    });
+  }
 });
 
 //  ------------------------------------------------------------------------
@@ -42,10 +42,12 @@ $(function() {
   // Set Navbar class incase user has already scrolled
   setNavbarClass();
   // On Scroll Event
-  $(window).scroll(function() {
-    // Set navbar background opacity
-    setNavbarClass();
-  });
+  if ($(window).width() > 767) {
+    $(window).scroll(function() {
+      // Set navbar background opacity
+      setNavbarClass();
+    });
+  }
 });
 
 function setNavbarClass() {
