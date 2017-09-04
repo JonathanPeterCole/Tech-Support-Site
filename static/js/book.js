@@ -5,6 +5,7 @@
 
 // Prepare page manager, form validator, and variables
 var bookingPageManager = new pageManager('#page-container');
+var formPageManager = new pageManager('#form-page-container');
 var validator = new formValidator();
 var serviceType;
 var siteType;
@@ -22,10 +23,12 @@ $(function() {
   $("#service-selection a").click(function(event) {
     // Remember the service type
     serviceType = $(this).attr("service-type");
+    // Set the form page
+    formPageManager.setPage(serviceType);
     // Change Page
     if(serviceType == "setup") {
       siteType = null;
-      bookingPageManager.setPage("setup-form", true);
+      bookingPageManager.setPage("form", true);
     } else if (serviceType == "upgrade" || serviceType == "repair") {
       bookingPageManager.setPage("site-selection", true);
     }
@@ -36,11 +39,7 @@ $(function() {
     // Remember the site type
     siteType = $(this).attr("site-type");
     // Change page
-    if(serviceType == "upgrade") {
-      bookingPageManager.setPage("upgrade-form", true);
-    } else if (serviceType == "repair") {
-      bookingPageManager.setPage("repair-form", true);
-    }
+    bookingPageManager.setPage("form", true);
   });
 
   // Submit action
@@ -76,7 +75,7 @@ $(function() {
 function validateForm(form) {
   // Check all the form fields and return the validation result
   var formIsValid = true;
-  $(form).find(".validated").each(function(){
+  $(form).find(".validated").not(".hidden .validated").each(function(){
     if (!validate($(this))) {
       formIsValid = false;
     }
@@ -98,7 +97,7 @@ function validate(field) {
 function getFormData(form) {
   // Get the form data data and add it to an associative array
   var formArray = {};
-  var serializedForm = form.serializeArray();
+  var serializedForm = $(form).find(":input").not(".hidden :input").serializeArray();
   for (var i = 0; i < serializedForm.length; i++) {
     formArray[serializedForm[i]['name']] = serializedForm[i]['value'];
   }

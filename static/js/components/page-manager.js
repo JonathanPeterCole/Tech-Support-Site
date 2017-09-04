@@ -19,6 +19,8 @@ function pageManager(pageContainer) {
     }
     // Change the pages
     currentPage.removeClass('display');
+    currentPage.addClass('hidden');
+    targetPage.removeClass('hidden');
     targetPage.addClass('display');
   }
 
