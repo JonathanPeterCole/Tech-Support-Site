@@ -263,7 +263,7 @@ nav {
   height: 64px;
   position: fixed;
   top: 0;
-  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
   background: rgba(255, 255, 255, 0);
   box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 5px;
   z-index: 1000;
@@ -327,7 +327,7 @@ nav.on-scroll {
   .navbar-list li a .highlight {
     height: 44px;
     padding: 0 30px;
-    transition: background 0.2s;
+    transition: background-color 0.2s;
     border-radius: 2px;
     background-color: #db2525;
     color: #fff;
