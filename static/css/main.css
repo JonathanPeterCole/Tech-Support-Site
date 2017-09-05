@@ -328,17 +328,17 @@ nav.on-scroll {
   color: #96013d;
 }
 @media (min-width: 768px) {
-  .navbar-list li a .highlight {
+  .navbar-list li a.highlight {
     height: 44px;
     padding: 0 30px;
     transition: background-color 0.2s;
     border-radius: 2px;
     background-color: #db2525;
     color: #fff;
-    margin: 10px 0;
+    margin: 10px 17px;
     line-height: 45px;
   }
-  .navbar-list li a:hover .highlight {
+  .navbar-list li a:hover.highlight {
     background: #96013d;
   }
 }
