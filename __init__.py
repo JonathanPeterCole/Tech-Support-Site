@@ -1,9 +1,9 @@
-import os, requests, validation
+import os, requests, validation, config
 from flask import Flask, redirect, request, render_template, send_from_directory, escape
 from flask_mail import Mail, Message
 
 app = Flask (__name__)
-app.config.from_object("config.BaseConfig")
+app.config.from_object(config.BaseConfig)
 mail = Mail(app)
 
 @app.route("/")
