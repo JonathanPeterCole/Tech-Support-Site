@@ -49,15 +49,15 @@ class BaseConfig(object):
     RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"
 ```
 
-3. Under `# Flask Mail`, replacing the variables with the appropriate configuration for the mail server you are using. In this example I'm using environment variables to keep the account credentials separate from the app, I cover how to set an environment variable on Ubuntu below.
+3. Under `# Flask Mail`, replacing the variables with the appropriate configuration for the mail server you are using.
 ```
 # Flask Mail
 MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 465
 MAIL_USE_SSL = True
-MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-MAIL_DEFAULT_SENDER = os.environ.get('MAIL_USERNAME')
+MAIL_USERNAME = "Example@email.com"
+MAIL_PASSWORD = "ExamplePassword123"
+MAIL_DEFAULT_SENDER = "Example@email.com"
 ```
 
 4. Under `# App Settings`, change the `BOOKING_EMAIL_TARGET` variable to the email you would like your emails to be sent to.
@@ -76,16 +76,6 @@ RECAPTCHA_SECRET_KEY = "Your Secret Key"
 RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"
 ```
 7. Save your edited config file.
-
-###### Setting an Environment Variable on Ubuntu
-
-1. Navigate to `/etc/`.
-
-2. Edit the environment file and add your environment variables as new lines, like so:
-```
-MAIL_USERNAME="username123@mail.com"
-MAIL_PASSWORD="password123"
-```
 
 ### Deploying the Site on a DigitalOcean Droplet
 For other projects, instances of Tech-Support-Site can be replaced with an appropriate project name.  
