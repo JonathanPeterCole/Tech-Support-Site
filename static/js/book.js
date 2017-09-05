@@ -46,8 +46,8 @@ $(function() {
   $("form").submit(function(event) {
     // Prevent the usual form submit action
     event.preventDefault();
-    // Check the validity of the form fields
-    if (validateForm($(this))) {
+    // Check the validity of the form fields and the reCAPTCHA
+    if (validateForm($(this)) && grecaptcha.getResponse().length != 0) {
       // Prepare the form date
       var bookingInfo = getFormData($(this));
       bookingInfo["service-type"] = serviceType;
