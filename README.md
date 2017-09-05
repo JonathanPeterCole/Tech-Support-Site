@@ -3,6 +3,18 @@
 ## About
 This is a basic website for freelance tech support using Flask with Flask Mail to email me bookings, prompting the user to provide useful information and only allowing them to submit if they enter the required information.
 
+## Planned Features & Changes
+* **Visitor Messages**  
+	Toast messages set using the config file that will automatically display to visitors.
+* **Quicker Booking from the Homepage**  
+	Booking links could be added to the services on the homepage to quickly access the booking form for that service.
+* **Online Ticket System**  
+	Rather than just sending an email to a booking address, an online ticket system could be developed using SQL.
+* **Switch to SASS**  
+	Currently pure CSS is being used on the site. SASS could be used to combine and minify CSS files.
+* **Upgrade to Bootstrap 4**  
+	Currently a modified version of Bootstrap 3 is being used on the site. This could be upgraded to Bootstrap 4 for easier use of flex-boxes in the grid-system.
+
 ## Making Changes
 
 ### Template files
