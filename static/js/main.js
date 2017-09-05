@@ -26,10 +26,13 @@ $(function() {
   // On Scroll Event
   if ($(window).width() > 767) {
     $(window).scroll(function() {
+      // Check if the banner is visible
+      if ($(window).scrollTop() <= 500) {
         // Get half the scroll distance
         var parallax = $(window).scrollTop()/3;
         // Apply a transform to the banner background
         $(".parallax").css({"transform": "translateY(" + parallax +"px)"})
+      }
     });
   }
 });
