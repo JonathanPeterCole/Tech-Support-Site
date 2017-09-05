@@ -489,7 +489,7 @@ footer {
 }
 @media (max-width: 767px) {
   .banner {
-    height: 135px;
+    height: 170px;
     margin-top: 64px;
   }
   .banner.large {
