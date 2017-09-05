@@ -18,17 +18,25 @@ def book():
 def submit_booking():
     # Get the form data
     json_data = request.get_json()
+    # Check for data in dictionary
+    if not json_data:
+        return "Request missing JSON data"
+    # Check the reCAPTCHA
+    if "g-recaptcha-response" not in json_data.keys():
+        return "Recaptcha response missing"
+    if not check_recaptcha(json_data.pop("g-recaptcha-response"), request.remote_addr):
+        return "Recaptcha check failed"
     # Validate the received data
-    if ("g-recaptcha-response" in json_data.keys() and
-        check_recaptcha(json_data.pop("g-recaptcha-response"), request.remote_addr)):
-        # Validate the received data
-        if json_data and validation.validate(json_data):
-            escape_values(json_data)
-            convert_newlines(json_data)
-            if send_booking_mail(json_data):
-                return "success"
-    # Validation failed or the email could not be sent, so return "error"
-    return "error"
+    if not validation.validate(json_data):
+        return "Data validation check failed"
+    # Prepare the data
+    escape_values(json_data)
+    convert_newlines(json_data)
+    # Attempt to send the mail
+    if not send_booking_mail(json_data):
+        return "Send mail error"
+    # If this point is reached, everything completed successfully
+    return "success"
 
 def check_recaptcha(response, ip):
     # Prepare the recaptcha verification_data

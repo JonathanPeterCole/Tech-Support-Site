@@ -67,7 +67,8 @@ $(function() {
   $(".page .back").click(function(event) {
     // Go back
     bookingPageManager.goBack();
-    // Hide the page status
+    // Reset the error text and hide the page status
+    $('.page-controls .page-status .error').html("");
     $('.page-controls .page-status').removeClass("show");
   });
 });
@@ -117,16 +118,21 @@ function submitData(url, data) {
       if (response == "success") {
         bookingPageManager.setPage('result', true);
       } else {
-        submitError();
+        submitError(response);
       }
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) {
-      submitError();
+      submitError("Request failed");
     }
   });
 }
 
-function submitError() {
+function submitError(error) {
+  if (error) {
+    $('.page-controls .page-status .error').html("(" + error + ")");
+  } else {
+    $('.page-controls .page-status .error').html("");
+  }
   $('.page-controls .page-status').addClass("show");
   bookingPageManager.goBack();
 }
