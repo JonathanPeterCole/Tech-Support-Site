@@ -4,8 +4,6 @@
 This is a basic website for freelance tech support using Flask with Flask Mail to email me bookings, prompting the user to provide useful information and only allowing them to submit if they enter the required information.
 
 ## Planned Features & Changes
-* **Visitor Messages**  
-	Toast messages set using the config file that will automatically display to visitors.
 * **Quicker Booking from the Homepage**  
 	Booking links could be added to the services on the homepage to quickly access the booking form for that service.
 * **Online Ticket System**  
