@@ -61,7 +61,7 @@ hr {
   height: 5px;
   background: #db2525;
   border: none;
-  margin-top: 12px;
+  margin-top: 10px;
   border-radius: 2.5px;
 }
 main {
@@ -69,22 +69,22 @@ main {
   overflow: auto;
 }
 main.nav-margin {
-  min-height: calc(100vh - 64px);
-  margin-top: 64px;
+  min-height: calc(100vh - 60px);
+  margin-top: 60px;
 }
 button {
   font-family: Quicksand, sans-serif;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1em;
   text-transform: uppercase;
-  height: 44px;
-  padding: 0 24px;
+  height: 40px;
+  padding: 0 22px;
   transition: background-color 0.2s, opacity 0.2s;
   border-radius: 3px;
   background-color: #ffffff;
   color: #000;
   margin-left: 10px;
-  line-height: 45px;
+  line-height: 41px;
   border: none;
   outline: none;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
@@ -110,12 +110,12 @@ button[disabled].highlight:hover {
 }
 section {
   width: 100%;
-  padding: 55px 0;
+  padding: 50px 0;
 }
 section header {
   width: 100%;
   line-height: 1.15;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   text-align: center;
 }
 section header.left {
@@ -143,17 +143,17 @@ h3 {
 }
 h1 {
   margin: 0 auto;
-  font-size: 5.6rem;
+  font-size: 5rem;
   font-weight: 700;
 }
 h2 {
   margin: 0 auto;
-  font-size: 3.8rem;
+  font-size: 3.4rem;
   display: inline-block;
 }
 h3 {
-  margin: 0 0 20px 0;
-  font-size: 2.1rem;
+  margin: 0 0 18px 0;
+  font-size: 2rem;
 }
 @media (max-width: 1199px) {
   h1 {
@@ -161,9 +161,6 @@ h3 {
   }
   h2 {
     font-size: 3.5rem;
-  }
-  h3 {
-    font-size: 2rem;
   }
 }
 @media (max-width: 991px) {
@@ -193,13 +190,13 @@ h3 {
 .text-light {
   font-family: Roboto, sans-serif;
   font-weight: 300;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #696969;
 }
 .text-bold {
   font-family: Roboto, sans-serif;
   font-weight: 700;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #696969;
 }
 .text-small {
@@ -207,14 +204,6 @@ h3 {
   font-weight: 500;
   font-size: 1em;
   color: #696969;
-}
-@media (max-width: 1199px) {
-  .text-light {
-    font-size: 1.2em;
-  }
-  .text-bold {
-    font-size: 1.2em;
-  }
 }
 @media (max-width: 991px) {
   .text-bold {
@@ -260,7 +249,7 @@ h3 {
 /* Navbar */
 nav {
   width: 100%;
-  height: 64px;
+  height: 60px;
   position: fixed;
   top: 0;
   transition: background-color 0.2s, box-shadow 0.2s;
@@ -277,8 +266,8 @@ nav.on-scroll {
 }
 .hamburger {
   float: left;
-  height: 64px;
-  width: 70px;
+  height: 60px;
+  width: 66px;
   padding: 25px;
   margin-left: -15px;
   display: none;
@@ -293,7 +282,7 @@ nav.on-scroll {
   margin-bottom: 4px;
 }
 .navbar-logo {
-  height: 64px;
+  height: 60px;
   padding: 17px 5px;
   float: left;
   z-index: 1200;
@@ -303,8 +292,8 @@ nav.on-scroll {
   height: 100%;
 }
 .navbar-list {
-  height: 64px;
-  margin: 0 -17px 0 0;
+  height: 60px;
+  margin: 0 -24px 0 0;
   padding: 0;
   list-style-type: none;
   float: right;
@@ -314,14 +303,14 @@ nav.on-scroll {
   float: left;
 }
 .navbar-list li a {
-  height: 64px;
-  padding: 0 17px;
+  height: 60px;
+  padding: 0 15px;
   display: inline-block;
   color: #db2525;
   font-family: Quicksand, sans-serif;
   font-weight: 700;
   font-size: 1.1em;
-  line-height: 65px;
+  line-height: 61px;
   text-transform: uppercase;
 }
 .navbar-list li a:hover {
@@ -335,7 +324,7 @@ nav.on-scroll {
     border-radius: 2px;
     background-color: #db2525;
     color: #fff;
-    margin: 10px 17px;
+    margin: 8px 17px;
     line-height: 45px;
   }
   .navbar-list li a:hover.highlight {
@@ -358,7 +347,7 @@ nav.on-scroll {
     background: #fff;
     width: 100%;
     z-index: 1100;
-    padding-top: 64px;
+    padding-top: 60px;
     transition: transform 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 0px 5px;
     transform: translate3d(calc(-100% - 5px), 0, 0);
@@ -383,7 +372,7 @@ nav.on-scroll {
 footer {
   background: #0f0f0f;
   padding: 40px 0px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 .footer-list {
   list-style-type: none;
@@ -408,14 +397,14 @@ footer {
 
 /* Banners */
 .banner {
-  height: 300px;
+  height: 270px;
   background: #0f0f0f;
   padding: 0;
   position: relative;
   overflow: hidden;
 }
 .banner.large {
-  height: 500px;
+  height: 450px;
 }
 .banner .parallax {
   position: relative;
@@ -440,7 +429,7 @@ footer {
 .banner-content {
   position: absolute;
   width: 100%;
-  bottom: 50px;
+  bottom: 45px;
   text-align: left;
   color: #fefefe;
 }
@@ -454,7 +443,7 @@ footer {
 .banner-content .subheading {
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1.1;
