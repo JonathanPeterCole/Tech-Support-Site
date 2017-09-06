@@ -13,9 +13,8 @@
 
 /* About */
 #about img {
-  height: 130px;
-  width: 130px;
-  margin: 5px auto;
+  height: 115px;
+  width: 115px;
   border-radius: 100%;
 }
 @media (max-width: 991px) {
@@ -45,8 +44,8 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 30px;
 }
 .service .text {
-  padding: 60px;
-  padding-bottom: 40px;
+  padding: 55px;
+  padding-bottom: 36px;
 }
 .service .image-box {
   padding: 0;
@@ -102,7 +101,7 @@
   border-radius: 2px;
   background-color: #db2525;
   color: #fff;
-  margin: 32px 0;
+  margin: 25px 0;
   line-height: 100%;
 }
 .book a:hover {
@@ -111,13 +110,13 @@
 .contact-method a {
   width: 100%;
   margin-bottom: 20px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
   display: inline-block;
   color: #b7b7b7;
   background-color: #252525;
   border-radius: 3px;
-  padding: 30px;
+  padding: 28px;
   box-shadow: rgba(0, 0, 0, 0) 0px 9px 30px;
   transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
