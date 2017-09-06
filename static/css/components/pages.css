@@ -25,8 +25,8 @@
 /* Page Content */
 .page .content-container {
   width: 100%;
-  padding: 35px 50px;
-  margin-bottom: 20px;
+  padding: 32px 45px;
+  margin-bottom: 18px;
   border-radius: 3px;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
@@ -41,7 +41,7 @@
 .page-controls .page-status {
   display: none;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-weight: 700;
   color: #db2525;
 }

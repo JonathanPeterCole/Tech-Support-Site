@@ -6,8 +6,8 @@
 /* General */
 a.selection-block {
   width: 100%;
-  padding: 50px;
-  margin-bottom: 20px;
+  padding: 45px;
+  margin-bottom: 18px;
   border-radius: 3px;
   text-align: center;
   display: inline-block;
@@ -21,16 +21,16 @@ a.selection-block:hover {
 }
 .selection-block .title {
   color: #333;
-  height: 50px;
+  height: 45px;
   margin-bottom: 0;
 }
 .selection-block .icon {
-  height: 100px;
-  margin: 80px 0 100px 0;
+  height: 90px;
+  margin: 72px 0 90px 0;
 }
 .selection-block .price {
   font-weight: 300;
-  font-size: 3em;
+  font-size: 2.7em;
   color: #db2525;
 }
 @media (max-width: 1199px) {
