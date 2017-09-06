@@ -6,6 +6,8 @@ app = Flask (__name__)
 app.config.from_object(config.BaseConfig)
 mail = Mail(app)
 
+version = "2.1.0"
+
 @app.route("/")
 def index():
     return render_template('index.html.j2')
@@ -87,12 +89,14 @@ def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
 
 @app.context_processor
-def get_visitor_msg():
+def set_variables():
+    # Set variables for all templates
     visitor_message = app.config.get("VISITOR_MESSAGE")
+    resource_version = "?version=" + version
     if visitor_message:
-        return dict(visitor_message = visitor_message)
+        return dict(resource_version = resource_version, visitor_message = visitor_message)
     else:
-        return dict()
+        return dict(resource_version = resource_version)
 
 @app.after_request
 def add_header(response):

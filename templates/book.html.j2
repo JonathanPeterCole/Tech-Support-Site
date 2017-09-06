@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block head %}
-  <link href="/static/css/components/pages.css" rel="stylesheet">
-  <link href="/static/css/book.css" rel="stylesheet">
-  <script src="/static/js/components/page-manager.js" defer></script>
-  <script src="/static/js/components/form-validation.js" defer></script>
-  <script src="/static/js/book.js" defer></script>
+  <link href="/static/css/components/pages.css{{ resource_version }}" rel="stylesheet">
+  <link href="/static/css/book.css{{ resource_version }}" rel="stylesheet">
+  <script src="/static/js/components/page-manager.js{{ resource_version }}" defer></script>
+  <script src="/static/js/components/form-validation.js{{ resource_version }}" defer></script>
+  <script src="/static/js/book.js{{ resource_version }}" defer></script>
   <script src="https://www.google.com/recaptcha/api.js" defer></script>
 {% endblock %}
 
