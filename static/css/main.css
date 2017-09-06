@@ -267,8 +267,8 @@ nav.on-scroll {
 .hamburger {
   float: left;
   height: 60px;
-  width: 66px;
-  padding: 25px;
+  width: 68px;
+  padding: 24px;
   margin-left: -15px;
   display: none;
   z-index: 1200;
