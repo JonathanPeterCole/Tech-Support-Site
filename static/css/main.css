@@ -552,9 +552,10 @@ label .highlight {
   background: #db2525;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
   transition: transform 0.4s ease;
+  transform: translate3d(0, 0, 0);
 }
 #toast.dismiss {
-  transform: translateY(calc(100% + 20px));
+  transform: translate3d(0, calc(100% + 20px), 0);
 }
 #toast .text {
   color: #ffffff;
