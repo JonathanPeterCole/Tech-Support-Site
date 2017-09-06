@@ -90,8 +90,7 @@ def static_from_root():
 def add_header(response):
     # Disable cache
     # Reference: https://stackoverflow.com/questions/34066804/disabling-caching-in-flask
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    response.headers['Cache-Control'] = 'public, max-age=0'
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, max-age=0"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "0"
     return response
