@@ -89,6 +89,41 @@ RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"
 ```
 7. Save your edited config file.
 
+###### Setting a Visitor Message
+
+1. Open your config.py file.
+
+2. In the config file, add a new line anywhere within BaseConfig and create a variable named `VISITOR_MESSAGE`.
+
+3. Set the value of the VISITOR_MESSAGE variable to a string of what you would like the welcome message to say, like this:
+```
+import os
+
+class BaseConfig(object):
+    # Flask
+    DEBUG = False
+    ALLOWED_EXTENSIONS = set(['txt', 'png', 'jpg', 'jpeg'])
+
+    # Flask Mail
+    MAIL_SERVER = "Email Server"
+    MAIL_PORT = 465
+    MAIL_USE_SSL = True
+    MAIL_USERNAME = "Mail Account Username"
+    MAIL_PASSWORD = "Mail Account Password"
+    MAIL_DEFAULT_SENDER = "Default Sending Address"
+
+    # App Settings
+    BOOKING_EMAIL_TARGET = "Your Bookings Email"
+		VISITOR_MESSAGE = "Services are currently unavailable due to the ongoing robot uprising. Sorry for the inconvenience."
+
+    # Recaptcha
+    RECAPTCHA_SITE_KEY = "Your Site Key"
+    RECAPTCHA_SECRET_KEY = "Your Secret Key"
+    RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"
+```
+
+4. If the app is running, you'll need to restart it for the message to appear.
+
 ### Deploying the Site on a DigitalOcean Droplet
 For other projects, instances of Tech-Support-Site can be replaced with an appropriate project name.  
 *Reference: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps*
