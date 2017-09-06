@@ -540,6 +540,34 @@ label .highlight {
   margin-bottom: 20px;
 }
 
+/* Toasts */
+#toast {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 3000;
+  margin: 10px;
+  border-radius: 2px;
+  background: #db2525;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
+  transition: transform 0.4s ease;
+}
+#toast.dismiss {
+  transform: translateY(calc(100% + 20px));
+}
+#toast .text {
+  color: #ffffff;
+  font-size: 1.1em;
+  margin: 20px;
+}
+#toast button {
+  margin-right: 10px;
+}
+#toast .close-btn:hover {
+  background-color: rgb(230, 230, 230);
+}
+
 /* Loading Spinner */
 /*Based on Modern Google Loader in Pure CSS by jczimm
 https://codepen.io/jczimm/pen/vEBpoL */

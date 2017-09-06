@@ -39,10 +39,25 @@
 </head>
 
 <body>
+  {# Include the navbar if it's enabled #}
   {% if navbar_enabled != false %}
     {% include "components/navbar.html.j2" %}
   {% endif %}
+
+  {# Set the body block #}
   {% block body %}{% endblock %}
+
+  {# Include the footer #}
   {% include "components/footer.html.j2" %}
+
+  {# Show a toast if a visitor message is set #}
+  {% if visitor_message %}
+    <div id="toast">
+      <div class="text">
+        {{ visitor_message }}
+      </div>
+      <button class="close-btn">Okay</button>
+    </div>
+  {% endif %}
 </body>
 </html>

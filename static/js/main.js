@@ -132,3 +132,14 @@ function scrollToAnchor(anchor, animation) {
   // Scroll to the target and close the mobile nav menu if it's open
   $('html,body').animate({scrollTop: offset}, animation);
 }
+
+//  ------------------------------------------------------------------------
+//  Toasts
+//  ------------------------------------------------------------------------
+
+$(function() {
+  // Hamburger Click Event
+  $("#toast .close-btn").click(function(event) {
+    $("#toast").addClass("dismiss");
+  });
+});

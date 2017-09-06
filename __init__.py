@@ -86,6 +86,14 @@ def static_from_root():
     # Get Robots.txt and Sitemap.xml from the static folder
     return send_from_directory(app.static_folder, request.path[1:])
 
+@app.context_processor
+def get_visitor_msg():
+    visitor_message = app.config.get("VISITOR_MESSAGE")
+    if visitor_message:
+        return dict(visitor_message = visitor_message)
+    else:
+        return dict()
+
 @app.after_request
 def add_header(response):
     # Disable cache
