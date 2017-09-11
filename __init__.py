@@ -6,7 +6,7 @@ app = Flask (__name__)
 app.config.from_object(config.BaseConfig)
 mail = Mail(app)
 
-version = "2.1.2"
+version = "2.1.3"
 
 @app.route("/")
 def index():
